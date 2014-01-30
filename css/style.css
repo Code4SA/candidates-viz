@@ -67,3 +67,9 @@ svg path.province:hover {
 	fill:#b1de89;
 	/*opacity:0.5;*/
 }
+
+svg path.province.active {
+    stroke: #333;
+	stroke-width:4;
+	fill:#73ba34;
+}

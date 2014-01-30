@@ -45,6 +45,11 @@
     });
     document.getElementById('results').innerHTML = '';
     svg = d3.select("#results").append("svg").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    d3.selectAll(".province").on("mousedown", function() {
+      return d3.select(this).classed("active", true);
+    }).on("mouseup", function() {
+      return d3.select(this).classed("active", false);
+    });
     age_groups = ['less than 30', '30 - 39', '40 - 49', '50 - 59', '60 and over'];
     color.domain(d3.keys(age_groups));
     console.log('domain: ', color.domain());
@@ -159,6 +164,7 @@
   on_province_clicked = function(e) {
     var group, province_name, render_data, _i, _len;
     console.log('on_province_clicked ', e);
+    console.log('on_province_clicked2 ', e);
     if (e.target.id in province_id_map) {
       province_name = province_id_map[e.target.id];
       console.log('selected :', province_name);

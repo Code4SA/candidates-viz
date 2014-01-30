@@ -44,6 +44,12 @@ plot_age_horz_stacked_bar = (data) ->
 	.append("g")
 	.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
 
+	d3.selectAll(".province")
+	.on "mousedown", ->
+		d3.select(this).classed "active", true
+	.on "mouseup", ->
+		d3.select(this).classed "active", false
+
 	age_groups = ['less than 30', '30 - 39', '40 - 49', '50 - 59', '60 and over']
 	#color.domain(d3.keys(data[0]).filter(function(key) { return key !== "State"; }));
 	color.domain(d3.keys(age_groups))
@@ -183,6 +189,7 @@ d3.csv("candidates.csv")
 
 on_province_clicked = (e) ->
 	console.log 'on_province_clicked ', e
+	console.log 'on_province_clicked2 ', e
 	if e.target.id of province_id_map
 		province_name = province_id_map[e.target.id]
 		console.log 'selected :', province_name
