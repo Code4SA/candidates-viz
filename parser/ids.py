@@ -13,6 +13,34 @@ python ids.py <text file with ids>
 id_reg = re.compile("\d{13}")
 ids = set()
 
+party_map = {
+    "AFRICAN NATIONAL CONGRESS" : "ANC",
+    "UNITED CHRISTIAN DEMOCRATIC PARTY" : "UCDP",
+    "DEMOCRATIC ALLIANCE/DEMOKRATIESE ALLIANSIE" : "DA",
+    "SOUTH AFRICAN DEMOCRATIC CONGRESS" : "SADC",
+    "PAN AFRICANIST CONGRESS OF AZANIA" : "PAC",
+    "UNITED DEMOCRATIC MOVEMENT" : "UDM",
+    "CONGRESS OF THE PEOPLE" : "COPE",
+    "AFRICAN CHRISTIAN DEMOCRATIC PARTY" : "ACDP",
+    "INKATHA FREEDOM PARTY" : "IFP",
+    "AZANIAN PEOPLE'S ORGANISATION" : "AZAPO",
+    "ALLIANCE OF FREE DEMOCRATS" : "AFD",
+    "INDEPENDENT DEMOCRATS" : "ID",
+    "GREAT KONGRESS OF SOUTH AFRICA" : "GKSA",
+    "VRYHEIDSFRONT PLUS" : "FF Plus",
+    "UNITED INDEPENDENT FRONT" : "UIF",
+    "MOVEMENT DEMOCRATIC PARTY" : "MDP",
+    "AFRICAN PEOPLE'S CONVENTION" : "APC",
+    "CHRISTIAN DEMOCRATIC ALLIANCE" : "CDA",
+    "PAN AFRICANIST MOVEMENT" : "PAM",
+    "NATIONAL DEMOCRATIC CONVENTION" : "NDC",
+    "NEW VISION PARTY" : "NVP",
+    "MINORITY FRONT" : "MF",
+    "WOMEN FORWARD" : "Women Forward",
+    "A PARTY" : "A Party",
+    "AL JAMA-AH" : "Al Jama-ah",
+}
+
 
 def median(lst):
     even = (0 if len(lst) % 2 else 1) + 1
@@ -121,15 +149,17 @@ class Parser(object):
             self._state = self.state_wait_for_table
         return Parser.NEXT
 
+    def reset(self):
+        self._party = None
+        self._province = None
+        self._type = None
+
     def state_wait_for_table(self, line):
         def find_extent(label1, label2):
             return (line.find(label1), line.find(label2))
 
         if "" in line:
-            self._party = None
-            self._province = None
-            self._type = None
-
+            self.reset()
             self._state = self.state_wait_for_type
             return Parser.SAME
 
@@ -148,8 +178,13 @@ class Parser(object):
             e = self._pos[idx]
             return line[e[0]: e[1]]
 
+        if "" in line:
+            self.reset()
+            self._state = self.state_wait_for_type
+            return Parser.SAME
+
         if not re.findall(id_reg, line):
-            self._state = self.state_wait_for_table
+            # Skip lines that don't have IDs
             return Parser.NEXT
         else:
             last_name = extent(0).strip()
@@ -170,6 +205,7 @@ class Parser(object):
 
     def parse(self, line):
         while True:
+
             result = self._state(line)
             if result == parser.SAME:
                 continue
@@ -193,6 +229,7 @@ def party_output(data):
         cleaned = [clean_candidate(list(c)) for c in candidates]
         results.append({
             "party" : party,
+            "abbr" : party_map.get(party, party),
             "males" : len(filter(lambda el : el[5] == "Male", candidates)),
             "females" : len(filter(lambda el : el[5] == "Female", candidates)),
             "young" : len(filter(lambda el : el[4] == "less than 39", candidates)),
