@@ -5,21 +5,37 @@ String.prototype.toProperCase = function () {
 //Options
 var width = 700,
     height = 600,
-    dotRadius = 4,
     gridSpacing = 40;
+
+var aspect = width / height;
 
 var min_radius = 4,
     max_radius = 20
 
 var min_age = 35,
     max_age = 57
-
-var min_women = 10,
+    min_women = 10,
     max_women = 90
 
 var svg = d3.select("#quadcontainer").append("svg")
-        .attr("width",width).attr("height",height)
+        .attr("width", width).attr("height",height)
+        .attr("viewBox", "0 0 " + width + " " + height)
+        .attr("preserveAspectRatio", "xMidYMid")
         .attr("id", "quad");
+
+var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0]
+
+function updateWindow(){
+    x = w.innerWidth || e.clientWidth || g.clientWidth;
+    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+    console.log(w.innerHeight);
+    svg.attr("width", x).attr("height", y);
+}
+window.onresize = updateWindow;
 
 var infobox = d3.select("#infobox")
 
@@ -99,13 +115,13 @@ d3.json("parties.json", function(error, json) {
         d3.selectAll("#youngest_members p").remove()
         d3.select("#youngest_members").selectAll("small").data(d.youngest).enter().append("small")
             .text(function(d2) {
-                return d2[0].toProperCase() + " (" + d2[2] + ") "
+                return d2[0].toProperCase() + " (" + d2[2] + ") | "
             })
 
         d3.selectAll("#oldest_members p").remove()
         d3.select("#oldest_members").selectAll("small").data(d.oldest).enter().append("small")
             .text(function(d2) {
-                return d2[0].toProperCase() + " (" + d2[2] + ") "
+                return d2[0].toProperCase() + " (" + d2[2] + ") | "
             })
 
 
