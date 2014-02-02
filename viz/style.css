@@ -1,0 +1,66 @@
+.grid {
+  stroke-width: 0.5px;
+  stroke: steelblue;
+  fill: none;
+  opacity: 0.5;
+}
+
+.axis {
+  stroke-width: 3px;
+  stroke: black;
+  fill: none;
+}
+
+g.item circle {
+  fill: red;
+  opacity: 0.65;
+  stroke: none;
+}
+
+g.item circle:hover {
+  cursor: pointer;
+  opacity: 1.0;
+}
+
+g.item circle.party.clicked {
+    fill: #cc0000;
+}
+
+svg.pie {
+    width: 100px;
+    height: 200px;
+}
+
+text {
+  font: 12px sans-serif;
+}
+
+#quad {
+    margin: 20px;
+    padding: 20px;
+}
+
+#party_info {
+    display: none;
+}
+
+.yaxis path, .yaxis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.yaxis text, .xaxis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.xaxis path, .xaxis line {
+    fill: none;
+    stroke-width:2;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.text-label {
+}
