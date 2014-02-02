@@ -1,4 +1,5 @@
 from __future__ import division
+import json
 import csv
 import re
 from collections import Counter
@@ -148,7 +149,7 @@ class Parser(object):
             last_name = extent(0).strip()
             first_name = extent(1).strip()
             id = extent(2).strip()
-            if not id in ids:
+            if not id in ids: # This isn't strictly correct, depends on what you're doing with the data
                 self.data[self._type].append([
                     "%s %s" % (first_name, last_name),
                     self._province or "National",
@@ -168,42 +169,52 @@ class Parser(object):
                 continue
             break
 
+def party_output(data):
+    regional = data["regional"]
+    national = data["national"]
+    allc = regional + national
+    results = []
+
+    def clean_candidate(c):
+        del c[4]
+        del c[2]
+        return c
+
+    parties = set(el[2] for el in regional) | set(el[2] for el in national)
+    for party in parties:
+        candidates = filter(lambda el : el[2] == party, allc)
+        candidates = sorted(candidates, key=lambda x : x[3])
+        cleaned = [clean_candidate(list(c)) for c in candidates]
+        results.append({
+            "party" : party,
+            "males" : len(filter(lambda el : el[5] == "Male", candidates)),
+            "females" : len(filter(lambda el : el[5] == "Female", candidates)),
+            "young" : len(filter(lambda el : el[4] == "less than 39", candidates)),
+            "middle" : len(filter(lambda el : el[4] == "39 - 59", candidates)),
+            "old" : len(filter(lambda el : el[4] == "60 - 79", candidates)),
+            "vold" : len(filter(lambda el : el[4] == "80 and over", candidates)),
+            "youngest" : cleaned[0:5],
+            "oldest" : cleaned[-5:],
+        })
+    return results
+
 if __name__ == "__main__":
-    writer = csv.writer(sys.stdout)
-    parser = Parser()
-    header = ["person", "province", "party", "age", "age_range", "gender"]
-    writer.writerow(header) 
-    for line in open(sys.argv[1]):
-        parser.parse(line)
+    with open("candidates.csv", "w") as fp:
+        writer = csv.writer(fp)
+        parser = Parser()
+        header = ["person", "province", "party", "age", "age_range", "gender"]
+        writer.writerow(header) 
+        for line in open(sys.argv[1]):
+            parser.parse(line)
 
-    for el in parser.data["regional"]:
-        writer.writerow(el) 
+        for el in parser.data["regional"]:
+            writer.writerow(el) 
 
-    for el in parser.data["national"]:
-        writer.writerow(el) 
+        for el in parser.data["national"]:
+            writer.writerow(el) 
 
-#fp = open(sys.argv[1])
-#party = sys.argv[2]
-#text = fp.read()
-#ids = set(re.findall(id_reg, text))
-#count = len(ids)
-#
-#
-#years = Counter()
-#star_signs = Counter()
-#gender = Counter()
-#
-#for id in ids:
-#    years[extract_year(id)] +=1
-#    star_signs[extract_starsigns(id)] +=1
-#    gender[extract_gender(id)] +=1
-#
-#print "Party : %s" % party
-#print "Number of Candidates: %d" % count
-#print "=" * 20
-#print ""
-#
-#print_output("Distribution by age", years, count)
-#print_output("Distribution by star sign", star_signs, count)
-#print_output("Distribution by gender", gender, count)
-#
+    results = party_output(parser.data)
+
+    f = open("parties.json", "w")
+    f.write(json.dumps(results, indent=4))
+    f.close()
