@@ -13,6 +13,12 @@ python ids.py <text file with ids>
 id_reg = re.compile("\d{13}")
 ids = set()
 
+
+def median(lst):
+    even = (0 if len(lst) % 2 else 1) + 1
+    half = (len(lst) - 1) // 2
+    return int(sum(sorted(lst)[half:half + even]) / float(even))
+
 def extract_age(id):
     year2 = int(id[0:2])
     return 2009 - (year2 + 1900)
@@ -195,6 +201,7 @@ def party_output(data):
             "vold" : len(filter(lambda el : el[4] == "80 and over", candidates)),
             "youngest" : cleaned[0:5],
             "oldest" : cleaned[-5:],
+            "median_age" : median([el[3] for el in candidates])
         })
     return results
 
