@@ -64,3 +64,8 @@ text {
 
 .text-label {
 }
+
+text.pie.label, text.pie.legend {
+    font-family: sans-serif;
+    font-size: 12px;
+}

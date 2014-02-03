@@ -17,12 +17,19 @@ var min_age = 35,
     min_women = 10,
     max_women = 90
 
-var svg = d3.select("#quadcontainer").append("svg")
-        .attr("width", width).attr("height",height)
-        .attr("viewBox", "0 0 " + width + " " + height)
-        .attr("preserveAspectRatio", "xMidYMid")
-        .attr("id", "quad");
+var infobox = d3.select("#infobox")
 
+var svg = d3.select("#quadcontainer").append("svg")
+    .attr("width", width).attr("height",height)
+    .attr("viewBox", "0 0 " + width + " " + height)
+    .attr("preserveAspectRatio", "xMidYMid")
+    .attr("id", "quad");
+
+//Scales for item positions
+var x = d3.scale.linear().domain([min_age, max_age]).range([0,width]);
+var y = d3.scale.linear().domain([min_women, max_women]).range([height,0]);
+
+// Set-up a window handler that re-sizes the svg when the window size changes
 var w = window,
     d = document,
     e = d.documentElement,
@@ -32,16 +39,10 @@ function updateWindow(){
     x = w.innerWidth || e.clientWidth || g.clientWidth;
     y = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
-    console.log(w.innerHeight);
     svg.attr("width", x).attr("height", y);
 }
+
 window.onresize = updateWindow;
-
-var infobox = d3.select("#infobox")
-
-//Scales for item positions
-var x = d3.scale.linear().domain([min_age, max_age]).range([0,width]);
-var y = d3.scale.linear().domain([min_women, max_women]).range([height,0]);
 
 //gridlines
 svg.append("path")
@@ -126,72 +127,50 @@ d3.json("parties.json", function(error, json) {
             })
 
 
-        // Gender Pie Chart
-        d3.selectAll("#gender_pie svg").remove()
-        var svg = d3.select("#gender_pie").append("svg")
-            .attr("class", "pie");
+        var draw_pie = function(el, data, labels, title) {
+            var data_size = data.length
+            el.selectAll("svg").remove()
+            var svg = el.append("svg")
+                .attr("class", "pie");
 
-        svg.selectAll("g")
-            .data(pie([d.males/total, d.females/total])).enter().append("g")
-            .attr("class", "arc")
-            .attr("transform", "translate(" + pie_radius + "," + pie_radius + ")")
-            .append("path")
-                .attr("d", pie_arc)
-                .style("fill", function(d, idx) { return pie_color(idx); });
+            svg.append("text")
+                .attr("class", "pie label")
+                .attr("text-anchor", "middle")
+                .attr("y", 10)
+                .attr("x", 45)
+                .text(title)
 
-        legend = svg.append("g");
-        legend.selectAll("rect.gender")
-            .data([pie_colors[0], pie_colors[1]])
-            .enter().append("rect")
-                .attr("height", 10)
-                .attr("width", 10)
-                .attr("y", function(d, idx) { return idx * 20 + pie_radius * 2})
-                .style("fill", function(d) { return d; })
+            svg.selectAll("g")
+                .data(pie(data)).enter().append("g")
+                .attr("class", "arc")
+                .attr("transform", "translate(" + pie_radius + "," + (pie_radius + 5) + ")")
+                .append("path")
+                    .attr("d", pie_arc)
+                    .style("fill", function(d, idx) { return pie_color(idx); });
 
-        legend.selectAll("text.gender")
-            .data(["Men", "Women"])
-            .enter().append("text")
-            .attr("class", "x label")
-            .attr("text-anchor", "begin")
-            .attr("y", function(d, idx) { return 20 * idx + pie_radius * 2 + 9})
-            .attr("x", 20)
-            .text(function(d) { return d; });
+            legend = svg.append("g");
+            legend.selectAll("rect")
+                .data(pie_colors.slice(0, data_size))
+                .enter().append("rect")
+                    .attr("height", 10)
+                    .attr("width", 10)
+                    .attr("y", function(d, idx) { return idx * 20 + pie_radius * 2 + 5})
+                    .attr("x", 20)
+                    .style("fill", function(d) { return d; })
 
-        d3.selectAll("#age_pie svg").remove()
-        var svg = d3.select("#age_pie").append("svg")
-            .attr("class", "pie")
+            legend.selectAll("text")
+                .data(labels)
+                .enter().append("text")
+                .attr("class", "pie legend")
+                .attr("text-anchor", "begin")
+                .attr("y", function(d, idx) { return 20 * idx + pie_radius * 2 + 14})
+                .attr("x", 40)
+                .text(function(d) { return d; });
 
-        svg.selectAll("g")
-            .data(pie([d.young/total, d.middle/total, d.old/total, d.vold/total])).enter().append("g")
-            .attr("class", "arc")
-            .attr("transform", "translate(" + pie_radius + "," + pie_radius + ")")
-            .append("path")
-                .attr("d", pie_arc)
-                .style("fill", function(d, idx) { return pie_color(idx); });
+        }
 
-        legend = svg.append("g");
-
-        legend.selectAll("rect.age")
-            .data([pie_colors[0], pie_colors[1], pie_color[2], pie_colors[3]])
-            .enter().append("rect")
-                .attr("height", 10)
-                .attr("width", 10)
-                .attr("x", 20)
-                .attr("y", function(d, idx) { return idx * 20 + pie_radius * 2})
-                .style("fill", function(d) { return d; })
-
-        legend.selectAll("text.age")
-            .data(["< 40", "40 - 59", "60 - 79", "80+"])
-            .enter().append("text")
-            .attr("class", "x label")
-            .attr("text-anchor", "begin")
-            .attr("y", function(d, idx) { return 20 * idx + pie_radius * 2 + 9})
-            .attr("x", 40)
-            .text(function(d) { return d; });
-
-
-
-
+        draw_pie(d3.select("#gender_pie"), [d.males/total, d.females/total], ["Men", "Women"], "By Gender")
+        draw_pie(d3.select("#age_pie"), [d.young/total, d.middle/total, d.old/total, d.vold/total], ["< 40", "40-59", "60-79", "80+"], "By Age")
     }
 
     //Add a dot
