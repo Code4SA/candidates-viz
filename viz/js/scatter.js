@@ -4,7 +4,7 @@ String.prototype.toProperCase = function () {
 
 //Options
 var width = 700,
-    height = 600,
+    height = 450,
     gridSpacing = 40;
 
 var aspect = width / height;
