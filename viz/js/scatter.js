@@ -43,16 +43,6 @@ var infobox = d3.select("#infobox")
 var x = d3.scale.linear().domain([min_age, max_age]).range([0,width]);
 var y = d3.scale.linear().domain([min_women, max_women]).range([height,0]);
 
-var datax = function(d) {
-    return x(d.median_age)
-}
-
-var datay = function(d) {
-    var total = d.males + d.females;
-    var perc = d.females / total * 100;
-    return y(perc);
-}
-
 //gridlines
 svg.append("path")
   .attr("class","grid")
@@ -91,6 +81,17 @@ d3.json("parties.json", function(error, json) {
         .linear()
         .range([min_radius, max_radius])
         .domain([0, max_total])
+
+    var datax = function(d) {
+        return x(d.median_age)
+    }
+
+    var datay = function(d) {
+        var total = d.males + d.females;
+        var perc = d.females / total * 100;
+        return y(perc);
+    }
+
 
     //One group per item
     var items = svg.selectAll("g.item")
@@ -288,7 +289,7 @@ d3.json("parties.json", function(error, json) {
     items.append("text")
         .attr("class", "text-label")
         .attr("x", datax)
-        .attr("y", y(50))
+        .attr("y", y(50)) // start off in the center before animating
         .attr("dy","1.25em")
         .attr("text-anchor","middle")
         .on("mouseover", display_infobox)
@@ -301,7 +302,10 @@ d3.json("parties.json", function(error, json) {
         })
         .text(function(d) { return d.abbr; })
         .transition().delay(40).ease("bounce").duration(1000)
-        .attr("y", datay)
+        .attr("y", function(d) {
+            total = d.males + d.females
+            return datay(d) + radius_scale(total) }
+        )
 
 
 });
