@@ -42,7 +42,7 @@ function updateWindow(){
     svg.attr("width", x).attr("height", y);
 }
 
-window.onresize = updateWindow;
+//window.onresize = updateWindow;
 
 //gridlines
 svg.append("path")
@@ -114,13 +114,16 @@ d3.json("parties.json", function(error, json) {
         d3.select("#lbl_old").text(parseInt(d.old / total * 100))
         d3.select("#lbl_vold").text(d.vold)
 
-        d3.selectAll("#youngest_members p").remove()
-        d3.select("#youngest_members").selectAll("small").data(d.youngest).enter().append("small")
-            .text(function(d2) {
-                return d2[0].toProperCase() + " (" + d2[2] + ") | "
-            })
+        d3.selectAll("#youngest_members small").remove()
+        d3.select("#youngest_members")
+            .selectAll("small")
+            .data(d.youngest).enter()
+            .append("small")
+                .text(function(d2) {
+                    return d2[0].toProperCase() + " (" + d2[2] + ") | "
+                })
 
-        d3.selectAll("#oldest_members p").remove()
+        d3.selectAll("#oldest_members small").remove()
         d3.select("#oldest_members").selectAll("small").data(d.oldest).enter().append("small")
             .text(function(d2) {
                 return d2[0].toProperCase() + " (" + d2[2] + ") | "
@@ -252,7 +255,7 @@ d3.json("parties.json", function(error, json) {
         .attr("class", "x label")
         .attr("text-anchor", "end")
         .attr("x", width)
-        .attr("y", xScale(50))
+        .attr("y", yScale(50))
         .attr("dy", "-0.6em")
         .text("older candidates →");
 
@@ -260,7 +263,7 @@ d3.json("parties.json", function(error, json) {
         .attr("class", "x label")
         .attr("text-anchor", "begin")
         .attr("x", 11)
-        .attr("y", xScale(50))
+        .attr("y", yScale(50))
         .attr("dy", "-0.6em")
         .text("← younger candidates");
 
