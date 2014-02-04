@@ -45,10 +45,10 @@ text {
 }
 
 #quad {
-    margin: 20px;
-    padding: 20px;
 }
 
+#quadcontainer {
+}
 #party_info {
     display: none;
 }

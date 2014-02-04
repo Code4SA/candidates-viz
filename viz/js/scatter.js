@@ -3,7 +3,7 @@ String.prototype.toProperCase = function () {
 };
 
 //Options
-var width = 700,
+var width = 620,
     height = 450,
     gridSpacing = 40;
 
@@ -17,31 +17,43 @@ var min_age = 35,
     min_women = 10,
     max_women = 90
 
+// setup X-Axis
+var xScale = d3.scale
+    .linear()
+    .range([50, width])
+    .domain([min_age, max_age])
+
+// setup Y-Axis
+var yScale = d3.scale
+    .linear()
+    .range([20, height - 20])
+    .domain([100, 0])
+
 middle_age = (min_age + max_age) / 2;
 var infobox = d3.select("#infobox")
 
 var svg = d3.select("#quadcontainer").append("svg")
     .attr("width", width).attr("height",height)
-    .attr("viewBox", "0 0 " + width + " " + (height + 20))
+    .attr("viewBox", "0 0 " + width + " " + height)
     .attr("preserveAspectRatio", "xMidYMid")
     .attr("id", "quad");
 
 //Scales for item positions
-var x = d3.scale.linear().domain([min_age, max_age]).range([0,width]);
+var x = d3.scale.linear().domain([min_age, max_age]).range([10, width]);
 var y = d3.scale.linear().domain([min_women, max_women]).range([height,0]);
 
 // Set-up a window handler that re-sizes the svg when the window size changes
-var w = window,
-    d = document,
-    e = d.documentElement,
-    g = d.getElementsByTagName('body')[0]
-
-function updateWindow(){
-    x = w.innerWidth || e.clientWidth || g.clientWidth;
-    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
-
-    svg.attr("width", x).attr("height", y);
-}
+//var w = window,
+//    d = document,
+//    e = d.documentElement,
+//    g = d.getElementsByTagName('body')[0]
+//
+//function updateWindow(){
+//    x = w.innerWidth || e.clientWidth || g.clientWidth;
+//    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+//
+//    svg.attr("width", x).attr("height", y);
+//}
 
 //window.onresize = updateWindow;
 
@@ -196,59 +208,42 @@ d3.json("parties.json", function(error, json) {
         .transition().delay(40).ease("bounce").duration(1000)
         .attr("cy", datay)
 
-    // setup Y-Axis
-    var yScale = d3.scale
-        .linear()
-        .range([0, height])
-        .domain([100, 0])
-
     var yAxis = d3.svg.axis()
         .tickFormat(function(d) { return d + "%"; })
         .scale(yScale)
         .orient("left")
-        .ticks(5)
+        .ticks(1)
 
     svg.append("g")
         .attr("class", "yaxis")
-        .attr("transform", "translate(0, -1)")
+        .attr("transform", "translate(" + xScale(min_age) + ", -1)")
         .call(yAxis)
 
     svg.append("text")
         .attr("class", "y label")
         .attr("text-anchor", "end")
         .attr("y", 6)
-        .attr("dy", "1.0em")
-        .attr("transform", "rotate(-90)")
-        .text("more women candidates →");
+        .attr("transform", "translate(" + (xScale(min_age) + 9) + "," + yScale(100) + ") rotate(-90)")
+        .text("more women →");
 
     svg.append("text")
         .attr("class", "y label")
+        .attr("text-anchor", "begin")
         .attr("y", 6)
-        .attr("dy", "1.0em")
-        .attr("dx", "0.8em")
-        .attr("transform", "translate(0, " + height + ") rotate(-90)")
-        .text("← fewer women candidates");
+        .attr("transform", "translate(" + (xScale(min_age) + 9) + "," + (yScale(0) - 5) + ") rotate(-90)")
+        .text("← fewer women");
 
-    //svg.append("text")
-    //    .attr("class", "y label")
-    //    .attr("text-anchor", "middle")
-    //    .attr("y", 6)
-    //    .attr("transform", "translate(0, " + height / 2 + ") rotate(-90)")
-    //    .text("% of female candidates");
-
-    // setup X-Axis
-    var xScale = d3.scale
-        .linear()
-        .range([0, width])
-        .domain([min_age, max_age])
-
+    svg.append("text")
+        .attr("class", "y label")
+        .attr("text-anchor", "middle")
+        .attr("dy", -5)
+        .attr("transform", "translate(" + xScale(min_age) + ", " + yScale(50) + ") rotate(-90)")
+        .text("% of female candidates");
 
     var xAxis = d3.svg.axis()
         .scale(xScale)
-        .orient("top")
-        .ticks(6)
-        .innerTickSize(0)
-        .outerTickSize(0)
+        .orient("bottom")
+        .ticks(3)
 
     svg.append("g")
         .attr("class", "xaxis")
@@ -277,12 +272,13 @@ d3.json("parties.json", function(error, json) {
         .attr("x", xScale(middle_age))
         .attr("y", yScale(0))
         .attr("dy", "1.2em")
-        .text("median age of candidates in list (years)");
+        .text("median age (years)");
 
     svg.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")
         .attr("x", width)
+        .attr("x", xScale(max_age))
         .attr("y", yScale(0))
         .attr("dy", "1.2em")
         .text("older candidates →");
@@ -290,8 +286,8 @@ d3.json("parties.json", function(error, json) {
     svg.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "begin")
-        .attr("x", 11)
         .attr("y", yScale(0))
+        .attr("x", xScale(min_age))
         .attr("dy", "1.2em")
         .text("← younger candidates");
 
