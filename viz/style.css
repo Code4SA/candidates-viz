@@ -71,7 +71,8 @@ text {
     shape-rendering: crispEdges;
 }
 
-.text-label {
+.text-label:hover {
+  cursor: pointer;
 }
 
 text.pie.label, text.pie.legend {

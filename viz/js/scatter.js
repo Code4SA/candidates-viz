@@ -39,8 +39,8 @@ var svg = d3.select("#quadcontainer").append("svg")
     .attr("id", "quad");
 
 //Scales for item positions
-var x = d3.scale.linear().domain([min_age, max_age]).range([10, width]);
-var y = d3.scale.linear().domain([min_women, max_women]).range([height,0]);
+//var x = d3.scale.linear().domain([min_age, max_age]).range([10, width]);
+//var y = d3.scale.linear().domain([min_women, max_women]).range([height,0]);
 
 // Set-up a window handler that re-sizes the svg when the window size changes
 //var w = window,
@@ -97,20 +97,24 @@ d3.json("parties.json", function(error, json) {
         .domain([0, max_total])
 
     var datax = function(d) {
-        return x(d.median_age)
+        return xScale(d.median_age)
     }
 
     var datay = function(d) {
         var total = d.males + d.females;
         var perc = d.females / total * 100;
-        return y(perc);
+        return yScale(perc);
     }
 
     //One group per item
     var items = svg.selectAll("g.item")
-        .data(itemList).enter()
-        .append("g")
-            .attr("class","item");
+        .data(itemList, function(d, i) {
+            total = d.males + d.females;
+            d.r = radius_scale(total);
+            d.y = datay(d)
+            d.x = datax(d)
+            return i;
+        }).enter().append("g").attr("class","item");
 
     display_infobox = function(d) {
         var total = d.males + d.females
@@ -188,26 +192,6 @@ d3.json("parties.json", function(error, json) {
         draw_pie(d3.select("#age_pie"), [d.young/total, d.middle/total, d.old/total, d.vold/total], ["< 40", "40-59", "60-79", "80+"], "By Age")
     }
 
-    //Add a dot
-    items.append("circle")
-        .attr("class", "party")
-        .attr("r", function(d) {
-            total = d.males + d.females;
-            return radius_scale(total);
-        })
-        .attr("cx", datax)
-        .attr("cy", y(50))
-        .on("mouseover", display_infobox)
-        .on("mousedown", function(d) {
-            d3.select(this).classed("clicked", true)
-            display_infobox(d);
-        })
-        .on("mouseup", function(d) {
-            d3.select(this).classed("clicked", false)
-        })
-        .transition().delay(40).ease("bounce").duration(1000)
-        .attr("cy", datay)
-
     var yAxis = d3.svg.axis()
         .tickFormat(function(d) { return d + "%"; })
         .scale(yScale)
@@ -262,8 +246,7 @@ d3.json("parties.json", function(error, json) {
         .attr("text-anchor", "end")
         .attr("x", xScale(max_age))
         .attr("y", yScale(50))
-        .attr("dy", "1.2em")
-        .attr("dx", "-2.2em")
+        .attr("dy", "-0.5em")
         .text("gender equality line");
 
     svg.append("text")
@@ -291,13 +274,14 @@ d3.json("parties.json", function(error, json) {
         .attr("dy", "1.2em")
         .text("← younger candidates");
 
-    //would need to use .getBBox() to make sure this doesn't hit the sides
-    items.append("text")
-        .attr("class", "text-label")
-        .attr("x", datax)
-        .attr("y", y(50)) // start off in the center before animating
-        .attr("dy","1.25em")
-        .attr("text-anchor","middle")
+    /* Circles and labels */
+    var circles = items.append("circle")
+        .attr("class", "party")
+        .attr("r", function(d) { return d.r; })
+        .attr("cx", function(d) {
+            return d.x;
+        })
+        .attr("cy", yScale(50)) // start off in the center before animating
         .on("mouseover", display_infobox)
         .on("mousedown", function(d) {
             d3.select(this).classed("clicked", true)
@@ -306,12 +290,58 @@ d3.json("parties.json", function(error, json) {
         .on("mouseup", function(d) {
             d3.select(this).classed("clicked", false)
         })
-        .text(function(d) { return d.abbr; })
         .transition().delay(40).ease("bounce").duration(1000)
-        .attr("y", function(d) {
-            total = d.males + d.females
-            return datay(d) + radius_scale(total) }
-        )
+        .attr("cy", function(d) { return d.y; })
+
+        
+    var label_array = JSON.parse(JSON.stringify(itemList)) // deep copy
+    var labels = items.append("text")
+        .attr("class", "text-label")
+        .attr("y", yScale(50)) // start off in the center before animating
+        .attr("x", function(d) { return d.x; })
+        .attr("dy","1.25em")
+        .attr("text-anchor","middle")
+        .text(function(d) { return d.abbr; })
+        .each(function(d, i) {
+            label_array[i].x = d.x;
+            label_array[i].y = d.y;
+            label_array[i].name = d.abbr;
+            label_array[i].width = this.getBBox().width;
+            label_array[i].height = this.getBBox().height;
+            console.log(label_array)
+            d.name = d.abbr;
+            d.width = this.getBBox().width;
+            d.height = this.getBBox().height;
+            return i;
+        })
+        .on("mouseover", display_infobox)
+        .on("mousedown", function(d) {
+            d3.select(this).classed("clicked", true)
+            display_infobox(d);
+        })
+        .on("mouseup", function(d) {
+            d3.select(this).classed("clicked", false)
+        })
+        .transition().delay(40).ease("bounce").duration(1000)
+        .attr("y", function(d) { return d.y; })
+
+    /* Labeler */
+    var sim_ann = d3.labeler()
+        .label(itemList)
+        .anchor(label_array)
+        .width(width)
+        .height(height)
+
+    function redrawLabels() {
+        // Redraw labels and leader lines
+
+        labels.transition()
+        .duration(800)
+        .attr("x", function(d) { return (d.x); })
+        .attr("y", function(d) { return (d.y); });
+    }
 
 
+    sim_ann.start(1000);
+    redrawLabels();
 });
