@@ -21,7 +21,7 @@ var infobox = d3.select("#infobox")
 
 var svg = d3.select("#quadcontainer").append("svg")
     .attr("width", width).attr("height",height)
-    .attr("viewBox", "0 0 " + width + " " + height)
+    .attr("viewBox", "0 0 " + width + " " + (height + 20))
     .attr("preserveAspectRatio", "xMidYMid")
     .attr("id", "quad");
 
@@ -92,7 +92,6 @@ d3.json("parties.json", function(error, json) {
         var perc = d.females / total * 100;
         return y(perc);
     }
-
 
     //One group per item
     var items = svg.selectAll("g.item")
@@ -203,9 +202,10 @@ d3.json("parties.json", function(error, json) {
         .domain([100, 0])
 
     var yAxis = d3.svg.axis()
+        .tickFormat(function(d) { return d + "%"; })
         .scale(yScale)
         .orient("left")
-        .ticks(5);
+        .ticks(5)
 
     svg.append("g")
         .attr("class", "yaxis")
@@ -226,6 +226,13 @@ d3.json("parties.json", function(error, json) {
         .attr("dy", "1.0em")
         .attr("transform", "translate(0, " + height + ") rotate(-90)")
         .text("← fewer women candidates");
+
+    //svg.append("text")
+    //    .attr("class", "y label")
+    //    .attr("text-anchor", "middle")
+    //    .attr("y", 6)
+    //    .attr("transform", "translate(0, " + height / 2 + ") rotate(-90)")
+    //    .text("% of female candidates");
 
     // setup X-Axis
     var xScale = d3.scale
