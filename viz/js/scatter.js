@@ -17,6 +17,7 @@ var min_age = 35,
     min_women = 10,
     max_women = 90
 
+middle_age = (min_age + max_age) / 2;
 var infobox = d3.select("#infobox")
 
 var svg = d3.select("#quadcontainer").append("svg")
@@ -209,7 +210,7 @@ d3.json("parties.json", function(error, json) {
 
     svg.append("g")
         .attr("class", "yaxis")
-        .attr("transform", "translate(6, -1)")
+        .attr("transform", "translate(0, -1)")
         .call(yAxis)
 
     svg.append("text")
@@ -224,6 +225,7 @@ d3.json("parties.json", function(error, json) {
         .attr("class", "y label")
         .attr("y", 6)
         .attr("dy", "1.0em")
+        .attr("dx", "0.8em")
         .attr("transform", "translate(0, " + height + ") rotate(-90)")
         .text("← fewer women candidates");
 
@@ -238,40 +240,59 @@ d3.json("parties.json", function(error, json) {
     var xScale = d3.scale
         .linear()
         .range([0, width])
-        .domain([min_age, max_age + 10])
+        .domain([min_age, max_age])
 
 
     var xAxis = d3.svg.axis()
         .scale(xScale)
         .orient("top")
-        .ticks(4);
+        .ticks(6)
+        .innerTickSize(0)
+        .outerTickSize(0)
 
     svg.append("g")
         .attr("class", "xaxis")
-        .attr("transform", "translate(7, " + yScale(50) + ")")
+        .attr("transform", "translate(0, " + yScale(0) + ")")
         .call(xAxis)
+
+    svg.append("line")
+        .attr("x1", xScale(min_age))
+        .attr("x2", xScale(max_age))
+        .attr("y1", yScale(50))
+        .attr("y2", yScale(50))
+        .attr("class", "axis middle-axis")
 
     svg.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")
-        .attr("x", width)
-        .attr("y", height - 6)
+        .attr("x", xScale(max_age))
+        .attr("y", yScale(50))
+        .attr("dy", "1.2em")
+        .attr("dx", "-2.2em")
+        .text("gender equality line");
+
+    svg.append("text")
+        .attr("class", "x label")
+        .attr("text-anchor", "middle")
+        .attr("x", xScale(middle_age))
+        .attr("y", yScale(0))
+        .attr("dy", "1.2em")
         .text("median age of candidates in list (years)");
 
     svg.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")
         .attr("x", width)
-        .attr("y", yScale(50))
-        .attr("dy", "-0.6em")
+        .attr("y", yScale(0))
+        .attr("dy", "1.2em")
         .text("older candidates →");
 
     svg.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "begin")
         .attr("x", 11)
-        .attr("y", yScale(50))
-        .attr("dy", "-0.6em")
+        .attr("y", yScale(0))
+        .attr("dy", "1.2em")
         .text("← younger candidates");
 
     //would need to use .getBBox() to make sure this doesn't hit the sides

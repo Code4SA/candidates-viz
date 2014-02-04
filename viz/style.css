@@ -11,6 +11,15 @@
   fill: none;
 }
 
+.middle-axis {
+    opacity:0.61728396;
+    fill:#000000;
+    stroke:#000000;
+    stroke-width:1px;
+    stroke-linecap:round
+    stroke-miterlimit:4;stroke-dasharray:2.00000001,6.00000003;stroke-dashoffset:0
+}
+
 g.item circle {
   fill: red;
   opacity: 0.65;
