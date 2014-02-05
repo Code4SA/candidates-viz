@@ -33,29 +33,9 @@ middle_age = (min_age + max_age) / 2;
 var infobox = d3.select("#infobox")
 
 var svg = d3.select("#quadcontainer").append("svg")
-    .attr("width", width).attr("height",height)
     .attr("viewBox", "0 0 " + width + " " + height)
     .attr("preserveAspectRatio", "xMidYMid")
     .attr("id", "quad");
-
-//Scales for item positions
-//var x = d3.scale.linear().domain([min_age, max_age]).range([10, width]);
-//var y = d3.scale.linear().domain([min_women, max_women]).range([height,0]);
-
-// Set-up a window handler that re-sizes the svg when the window size changes
-//var w = window,
-//    d = document,
-//    e = d.documentElement,
-//    g = d.getElementsByTagName('body')[0]
-//
-//function updateWindow(){
-//    x = w.innerWidth || e.clientWidth || g.clientWidth;
-//    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
-//
-//    svg.attr("width", x).attr("height", y);
-//}
-
-//window.onresize = updateWindow;
 
 //gridlines
 svg.append("path")
@@ -75,46 +55,21 @@ svg.append("path")
   })
 
 
-// setup pie charts
-var pie_radius = 50;
-var pie_colors = ["#ca0020", "#92c5de", "#f4a582", "#0571b0"];
-var pie_color = d3.scale.ordinal().range(pie_colors);
-
-var pie_arc = d3.svg.arc()
-    .outerRadius(pie_radius - 10)
-    .innerRadius(0);
-
-var pie = d3.layout.pie().sort(null)
-
 d3.json("parties.json", function(error, json) {
     if (error) return console.warn(error);
     itemList = json;
 
-    var max_total = d3.max(itemList, function(d) { return d.males + d.females; });
-    var radius_scale = d3.scale
-        .linear()
-        .range([min_radius, max_radius])
-        .domain([0, max_total])
+    /************************ Side bar **********************/
+    var pie_radius = 50;
+    var pie_colors = ["#ca0020", "#92c5de", "#f4a582", "#0571b0"];
+    var pie_color = d3.scale.ordinal().range(pie_colors);
 
-    var datax = function(d) {
-        return xScale(d.median_age)
-    }
+    var pie_arc = d3.svg.arc()
+        .outerRadius(pie_radius - 10)
+        .innerRadius(0);
 
-    var datay = function(d) {
-        var total = d.males + d.females;
-        var perc = d.females / total * 100;
-        return yScale(perc);
-    }
+    var pie = d3.layout.pie().sort(null)
 
-    //One group per item
-    var items = svg.selectAll("g.item")
-        .data(itemList, function(d, i) {
-            total = d.males + d.females;
-            d.r = radius_scale(total);
-            d.y = datay(d)
-            d.x = datax(d)
-            return i;
-        }).enter().append("g").attr("class","item");
 
     display_infobox = function(d) {
         var total = d.males + d.females
@@ -191,6 +146,39 @@ d3.json("parties.json", function(error, json) {
         draw_pie(d3.select("#gender_pie"), [d.males/total, d.females/total], ["Men", "Women"], "By Gender")
         draw_pie(d3.select("#age_pie"), [d.young/total, d.middle/total, d.old/total, d.vold/total], ["< 40", "40-59", "60-79", "80+"], "By Age")
     }
+
+    /************************ Scatter plot *************************/
+    var max_total = d3.max(itemList, function(d) { return d.males + d.females; });
+    var radius_scale = d3.scale
+        .linear()
+        .range([min_radius, max_radius])
+        .domain([0, max_total])
+
+    var font_scale = d3.scale
+        .linear()
+        .range([0.6, 0.8])
+        .domain([0, max_total])
+
+    var datax = function(d) {
+        return xScale(d.median_age)
+    }
+
+    var datay = function(d) {
+        var total = d.males + d.females;
+        var perc = d.females / total * 100;
+        return yScale(perc);
+    }
+
+    //One group per item
+    var items = svg.selectAll("g.item")
+        .data(itemList, function(d, i) {
+            d.total = d.males + d.females;
+            d.r = radius_scale(d.total);
+            d.y = datay(d)
+            d.x = datax(d)
+            return i;
+        }).enter().append("g").attr("class","item");
+
 
     var yAxis = d3.svg.axis()
         .tickFormat(function(d) { return d + "%"; })
@@ -297,6 +285,9 @@ d3.json("parties.json", function(error, json) {
     var label_array = JSON.parse(JSON.stringify(itemList)) // deep copy
     var labels = items.append("text")
         .attr("class", "text-label")
+        .style("font-size", function(d) {
+            return font_scale(d.total) + "em";
+        })
         .attr("y", yScale(50)) // start off in the center before animating
         .attr("x", function(d) { return d.x; })
         .attr("dy","1.25em")
@@ -308,7 +299,6 @@ d3.json("parties.json", function(error, json) {
             label_array[i].name = d.abbr;
             label_array[i].width = this.getBBox().width;
             label_array[i].height = this.getBBox().height;
-            console.log(label_array)
             d.name = d.abbr;
             d.width = this.getBBox().width;
             d.height = this.getBBox().height;
