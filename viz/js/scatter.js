@@ -9,33 +9,34 @@ var width = 620,
 
 var aspect = width / height;
 
-var min_radius = 4,
-    max_radius = 20
+var min_radius = 8,
+    max_radius = 30;
 
 var min_age = 35,
-    max_age = 57
+    max_age = 57,
     min_women = 10,
-    max_women = 90
+    max_women = 90;
 
 // setup X-Axis
 var xScale = d3.scale
     .linear()
     .range([50, width])
-    .domain([min_age, max_age])
+    .domain([min_age, max_age]);
 
 // setup Y-Axis
 var yScale = d3.scale
     .linear()
     .range([20, height - 20])
-    .domain([100, 0])
+    .domain([100, 0]);
 
 middle_age = (min_age + max_age) / 2;
-var infobox = d3.select("#infobox")
+var infobox = d3.select("#infobox");
 
 var svg = d3.select("#quadcontainer").append("svg")
     .attr("viewBox", "0 0 " + width + " " + height)
     .attr("preserveAspectRatio", "xMidYMid")
     .attr("id", "quad");
+
 
 //gridlines
 svg.append("path")
@@ -50,7 +51,6 @@ svg.append("path")
     for (var i = gridSpacing; i < height; i += gridSpacing ) {
       d += "M0,"+i+" L"+width+","+i;
     }
-
     return d;
   })
 
@@ -73,32 +73,33 @@ d3.json("parties.json", function(error, json) {
 
     display_infobox = function(d) {
         var total = d.males + d.females
-
+        d3.selectAll("circle.party").classed("active", false);
+        d3.select(this.parentNode).select("circle").classed("active", true);
         d3.select("#party_info").style("display", "block");
-        d3.select("#lbl_party").text(d.party.toProperCase())
-        d3.select("#lbl_total").text(total)
-        d3.select("#lbl_males").text(parseInt(d.males / total * 100))
-        d3.select("#lbl_females").text(parseInt(d.females / total * 100))
-        d3.select("#lbl_median").text(d.median_age)
-        d3.select("#lbl_young").text(parseInt(d.young / total * 100))
-        d3.select("#lbl_middle").text(parseInt(d.middle / total * 100))
-        d3.select("#lbl_old").text(parseInt(d.old / total * 100))
-        d3.select("#lbl_vold").text(d.vold)
+        d3.select("#lbl_party").text(d.party.toProperCase());
+        d3.select("#lbl_total").text(total);
+        d3.select("#lbl_males").text(parseInt(d.males / total * 100));
+        d3.select("#lbl_females").text(parseInt(d.females / total * 100));
+        d3.select("#lbl_median").text(d.median_age);
+        d3.select("#lbl_young").text(parseInt(d.young / total * 100));
+        d3.select("#lbl_middle").text(parseInt(d.middle / total * 100));
+        d3.select("#lbl_old").text(parseInt(d.old / total * 100));
+        d3.select("#lbl_vold").text(d.vold);
 
-        d3.selectAll("#youngest_members small").remove()
+        d3.selectAll("#youngest_members small").remove();
         d3.select("#youngest_members")
             .selectAll("small")
             .data(d.youngest).enter()
             .append("small")
-                .text(function(d2) {
-                    return d2[0].toProperCase() + " (" + d2[2] + ") | "
-                })
+            .text(function(d2) {
+                return d2[0].toProperCase() + " (" + d2[2] + ") | "
+            });
 
-        d3.selectAll("#oldest_members small").remove()
+        d3.selectAll("#oldest_members small").remove();
         d3.select("#oldest_members").selectAll("small").data(d.oldest).enter().append("small")
             .text(function(d2) {
                 return d2[0].toProperCase() + " (" + d2[2] + ") | "
-            })
+            });
 
 
         var draw_pie = function(el, data, labels, title) {
@@ -152,12 +153,12 @@ d3.json("parties.json", function(error, json) {
     var radius_scale = d3.scale
         .linear()
         .range([min_radius, max_radius])
-        .domain([0, max_total])
+        .domain([0, max_total]);
 
     var font_scale = d3.scale
         .linear()
         .range([0.6, 0.8])
-        .domain([0, max_total])
+        .domain([0, max_total]);
 
     var datax = function(d) {
         return xScale(d.median_age)
@@ -168,16 +169,20 @@ d3.json("parties.json", function(error, json) {
         var perc = d.females / total * 100;
         return yScale(perc);
     }
+    
 
     //One group per item
     var items = svg.selectAll("g.item")
         .data(itemList, function(d, i) {
             d.total = d.males + d.females;
             d.r = radius_scale(d.total);
-            d.y = datay(d)
-            d.x = datax(d)
+            d.y = datay(d);
+            d.x = datax(d);
             return i;
-        }).enter().append("g").attr("class","item");
+        })
+        .enter()
+        .append("g")
+        .attr("class","item");
 
 
     var yAxis = d3.svg.axis()
@@ -220,14 +225,14 @@ d3.json("parties.json", function(error, json) {
     svg.append("g")
         .attr("class", "xaxis")
         .attr("transform", "translate(0, " + yScale(0) + ")")
-        .call(xAxis)
+        .call(xAxis);
 
     svg.append("line")
         .attr("x1", xScale(min_age))
         .attr("x2", xScale(max_age))
         .attr("y1", yScale(50))
         .attr("y2", yScale(50))
-        .attr("class", "axis middle-axis")
+        .attr("class", "axis middle-axis");
 
     svg.append("text")
         .attr("class", "x label")
@@ -262,6 +267,21 @@ d3.json("parties.json", function(error, json) {
         .attr("dy", "1.2em")
         .text("← younger candidates");
 
+    // Colours
+    
+    color = d3.scale.category20c();
+    color_list = [
+        "#BE008A", "#8F2471",  "#7C005A",  "#DF38B1",  "#DF64BD", 
+        "#FF8100",  "#BF7830",  "#A65400",  "#FFA040",  "#FFBA73",
+        "#1729B0",  "#2E3884",  "#081472",  "#4B5CD7",  "#717DD7"
+    ];
+    color_list = pie_colors.slice(0);
+    // color_list.reverse();
+    // color_list.shift();
+    var color_scale = d3.scale
+        .ordinal()
+        .range(color_list)
+        .domain([0, max_total]);
     /* Circles and labels */
     var circles = items.append("circle")
         .attr("class", "party")
@@ -270,16 +290,18 @@ d3.json("parties.json", function(error, json) {
             return d.x;
         })
         .attr("cy", yScale(50)) // start off in the center before animating
+        .style("fill", function(d, i) { console.log(d.abbr, d.males + d.females); return color_scale(d.males + d.females); })
         .on("mouseover", display_infobox)
         .on("mousedown", function(d) {
-            d3.select(this).classed("clicked", true)
+            d3.select(this).classed("clicking", true)
             display_infobox(d);
         })
         .on("mouseup", function(d) {
-            d3.select(this).classed("clicked", false)
+            d3.select(this).classed("clicking", false)
         })
         .transition().delay(40).ease("bounce").duration(1000)
         .attr("cy", function(d) { return d.y; })
+
 
         
     var label_array = JSON.parse(JSON.stringify(itemList)) // deep copy
@@ -290,7 +312,7 @@ d3.json("parties.json", function(error, json) {
         })
         .attr("y", yScale(50)) // start off in the center before animating
         .attr("x", function(d) { return d.x; })
-        .attr("dy","1.25em")
+        .attr("dy","1.2em")
         .attr("text-anchor","middle")
         .text(function(d) { return d.abbr; })
         .each(function(d, i) {
@@ -335,3 +357,59 @@ d3.json("parties.json", function(error, json) {
     sim_ann.start(1000);
     redrawLabels();
 });
+
+var origWidth = 0;
+document.getElementById('embiggen_container').onclick = function() {
+    if (this.className.search(/\bembiggen\b/gi) == -1) {
+        var offsetTop = this.offsetTop;
+        var marginTop = (offsetTop * -1) + 20;
+        origWidth = this.offsetWidth;
+        origHeight = this.offsetHeight;
+        origMarginLeft = this.marginLeft;
+        origMarginTop = this.marginTop;
+        origStyle = this.style;
+        console.log(origWidth);
+        this.style.zIndex = 5000;
+        this.style.width = (parseInt(window.innerWidth) - 40) + "px";
+        this.style.height = (parseInt(window.innerHeight) - 20) + "px";
+        this.style.position = "absolute";
+        this.style.top = offsetTop + "px";
+        this.style.marginTop = marginTop + "px";
+        this.style.marginLeft = "20px";
+        this.style.overflowY = "scroll";
+        d3.select(this).classed("embiggen", true);
+
+        document.getElementById('close').onclick = function(e) {
+
+            console.log(origWidth);
+            var el = this.parentNode;
+            el.className = el.className.replace(/\banimate\b/gi, '');
+            console.log(el.className.replace(/\bembiggen\b/gi, ''));
+            el.className = el.className.replace(/\bembiggen\b/gi, '');
+            el.removeAttribute("style");
+            // el.style.overflowY = "none";
+            // el.style.position = "relative";
+            // el.style.width = origWidth + "px";
+            // el.style.height = origHeight + "px";
+            // el.style.marginLeft = origMarginLeft + "px";
+            // el.style.marginTop = origMarginTop + "px";
+            // el.style = origStyle;
+            e.stopPropagation();
+            el.className += "animate";
+        }
+    };
+
+
+
+        // .style("width", (parseInt(window.innerWidth) - 20))
+        // .classed("small", false)
+        // .classed("embiggen", true)
+        // .select("#close")
+        // .on("mousedown", function() {
+        //     d3.select(this.parentNode)
+        //         .classed("small", true)
+        //         .classed("embiggen", false)
+        // });
+    
+
+}
