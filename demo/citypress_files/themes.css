@@ -1,0 +1,1442 @@
+/* Hand cursor over navigation elements */
+.unoslider_theme_basic .unoslider_navigation {
+  cursor: pointer;
+}
+
+/* container which contains navigation and indicator */
+.unoslider_theme_basic .unoslider_navigation_container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Tooltip panel */
+.unoslider_theme_basic .unoslider_caption {
+  position: absolute;
+  right: 60px;
+  bottom: 15px;
+  left: 60px;
+  font-family: "Helvetica neue", Helvetica, Verdana, sans-serif;
+  padding: 10px 0px;
+  width: auto;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* play, pause, previous and next elements */
+.unoslider_theme_basic .unoslider_pause, .unoslider_theme_basic .unoslider_play, .unoslider_theme_basic .unoslider_left, .unoslider_theme_basic .unoslider_right {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  background: url("basic.png") no-repeat;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+.unoslider_theme_basic .unoslider_pause:hover, .unoslider_theme_basic .unoslider_play:hover, .unoslider_theme_basic .unoslider_left:hover, .unoslider_theme_basic .unoslider_right:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+
+/* play and pause elements */
+.unoslider_theme_basic .unoslider_pause, .unoslider_theme_basic .unoslider_play {
+  height: 46px;
+  width: 46px;
+  margin-top: -23px;
+  margin-left: -23px;
+  top: 50%;
+  left: 50%;
+  -webkit-border-radius: 90px;
+  -moz-border-radius: 90px;
+  -ms-border-radius: 90px;
+  -o-border-radius: 90px;
+  border-radius: 90px;
+}
+
+/* previous and next elements */
+.unoslider_theme_basic .unoslider_left, .unoslider_theme_basic .unoslider_right {
+  width: 40px;
+  height: 100%;
+}
+
+/* previous */
+.unoslider_theme_basic .unoslider_left {
+  background-position: 10px center;
+  left: 0;
+}
+
+/* next */
+.unoslider_theme_basic .unoslider_right {
+  background-position: -52px center;
+  right: 0;
+}
+
+/* pause */
+.unoslider_theme_basic .unoslider_pause {
+  background-position: -163px 10px;
+}
+
+/* play */
+.unoslider_theme_basic .unoslider_play {
+  background-position: -110px 10px;
+}
+
+/* bullet indicator */
+.unoslider_theme_basic .unoslider_indicator {
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  width: 100%;
+  text-align: right;
+  overflow: hidden;
+}
+.unoslider_theme_basic .unoslider_indicator a {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  overflow: visible;
+  cursor: pointer;
+  background: black;
+  margin: 3px;
+  width: 12px;
+  height: 12px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+}
+.unoslider_theme_basic .unoslider_indicator a {
+  *display: inline;
+}
+.unoslider_theme_basic .unoslider_indicator a.unoslider_indicator_active, .unoslider_theme_basic .unoslider_indicator a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border: 3px solid black;
+}
+
+/* Hand cursor over navigation elements */
+.unoslider_theme_elegant .unoslider_navigation {
+  cursor: pointer;
+}
+
+/* Tooltip panel */
+.unoslider_theme_elegant .unoslider_caption {
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  padding: 10px 15px;
+  font-family: "Helvetica neue", Helvetica, Verdana, sans-serif;
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+}
+
+/* play, pause, previous and next elements */
+.unoslider_theme_elegant .unoslider_pause, .unoslider_theme_elegant .unoslider_play, .unoslider_theme_elegant .unoslider_left, .unoslider_theme_elegant .unoslider_right {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  background: url("elegant.png") no-repeat;
+}
+
+/* play and pause elements */
+.unoslider_theme_elegant .unoslider_pause, .unoslider_theme_elegant .unoslider_play {
+  height: 44px;
+  width: 44px;
+  margin-top: -22px;
+  margin-left: -22px;
+  top: 50%;
+  left: 50%;
+}
+
+/* previous and next elements */
+.unoslider_theme_elegant .unoslider_left, .unoslider_theme_elegant .unoslider_right {
+  width: 25px;
+  height: 46px;
+  margin-top: -23px;
+  top: 50%;
+}
+
+/* previous */
+.unoslider_theme_elegant .unoslider_left {
+  background-position: 0px -93px;
+  left: 0;
+}
+
+/* next */
+.unoslider_theme_elegant .unoslider_right {
+  background-position: -26px -93px;
+  right: 0;
+}
+
+/* pause */
+.unoslider_theme_elegant .unoslider_pause {
+  background-position: 0px -46px;
+}
+
+/* play */
+.unoslider_theme_elegant .unoslider_play {
+  background-position: 0px 0px;
+}
+
+/* bullet indicator */
+.unoslider_theme_elegant .unoslider_indicator {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  text-align: left;
+  _text-align: right;
+  *text-align: right;
+  _width: 97%;
+  *width: 97%;
+  -webkit-box-shadow: 0px 0px 2px black;
+  -moz-box-shadow: 0px 0px 2px black;
+  box-shadow: 0px 0px 2px black;
+  height: 10px;
+  font-size: 0px;
+}
+.unoslider_theme_elegant .unoslider_indicator a {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  background: white;
+  padding: 0;
+  margin: 0;
+  width: 20px;
+  height: 10px;
+}
+.unoslider_theme_elegant .unoslider_indicator a {
+  *display: inline;
+}
+.unoslider_theme_elegant .unoslider_indicator a.unoslider_indicator_active {
+  background: black;
+}
+.unoslider_theme_elegant .unoslider_indicator a:hover {
+  background: #cccccc;
+}
+
+/* Hand cursor over navigation elements */
+.unoslider_theme_inline .unoslider_navigation {
+  cursor: pointer;
+}
+
+/* container which contains navigation and indicator */
+.unoslider_theme_inline .unoslider_navigation_container {
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/* Tooltip panel */
+.unoslider_theme_inline .unoslider_caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: "Helvetica neue", Helvetica, Verdana, sans-serif;
+  line-height: 35px;
+  padding: 0 20px;
+  text-align: left;
+  color: #333333;
+  font-size: 13px;
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+
+/* play, pause, previous and next elements */
+.unoslider_theme_inline .unoslider_pause, .unoslider_theme_inline .unoslider_play, .unoslider_theme_inline .unoslider_left, .unoslider_theme_inline .unoslider_right {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  background: url("inline.png") no-repeat;
+}
+
+/* play and pause elements */
+.unoslider_theme_inline .unoslider_pause, .unoslider_theme_inline .unoslider_play {
+  height: 21px;
+  width: 20px;
+  margin-top: -10.5px;
+  margin-left: -10px;
+  top: 50%;
+  right: 35px;
+}
+
+/* previous and next elements */
+.unoslider_theme_inline .unoslider_left, .unoslider_theme_inline .unoslider_right {
+  width: 13px;
+  height: 24px;
+  margin-top: -12px;
+  top: 50%;
+}
+
+/* previous */
+.unoslider_theme_inline .unoslider_left {
+  background-position: 0px -25px;
+  right: 70px;
+}
+
+/* next */
+.unoslider_theme_inline .unoslider_right {
+  background-position: -17px -25px;
+  right: 15px;
+}
+
+/* pause */
+.unoslider_theme_inline .unoslider_pause {
+  background-position: -24px 0px;
+}
+
+/* play */
+.unoslider_theme_inline .unoslider_play {
+  background-position: 0px 0px;
+}
+
+/* bullet indicator */
+.unoslider_theme_inline .unoslider_indicator {
+  position: absolute;
+  right: 100px;
+  bottom: 5px;
+  width: 100%;
+  text-align: right;
+}
+.unoslider_theme_inline .unoslider_indicator a {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  margin: 3px;
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  background: url("inline.png") no-repeat;
+  background-position: 0 -53px;
+}
+.unoslider_theme_inline .unoslider_indicator a {
+  *display: inline;
+}
+.unoslider_theme_inline .unoslider_indicator a.unoslider_indicator_active {
+  background-position: 0px -73px;
+}
+
+/* Hand cursor over navigation elements */
+.unoslider_theme_light .unoslider_navigation {
+  cursor: pointer;
+}
+
+/* container which contains navigation and indicator */
+.unoslider_theme_light .unoslider_navigation_container {
+  background: white;
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/* Tooltip panel */
+.unoslider_theme_light .unoslider_caption {
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+  font-family: "Helvetica neue", Helvetica, Verdana, sans-serif;
+  line-height: 35px;
+  width: 80%;
+  text-align: center;
+  color: #707070;
+  font-size: 13px;
+}
+
+/* play, pause, previous and next elements */
+.unoslider_theme_light .unoslider_pause, .unoslider_theme_light .unoslider_play, .unoslider_theme_light .unoslider_left, .unoslider_theme_light .unoslider_right {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  background: url("light.png") no-repeat;
+}
+
+/* play and pause elements */
+.unoslider_theme_light .unoslider_pause, .unoslider_theme_light .unoslider_play {
+  height: 26px;
+  width: 25px;
+  margin-top: -13px;
+  margin-left: -12.5px;
+  top: 50%;
+  left: 98%;
+}
+
+/* previous and next elements */
+.unoslider_theme_light .unoslider_left, .unoslider_theme_light .unoslider_right {
+  width: 26px;
+  height: 25px;
+  margin-top: -12.5px;
+  top: 50%;
+}
+
+/* previous */
+.unoslider_theme_light .unoslider_left {
+  background-position: 0px -27px;
+  right: 70px;
+}
+
+/* next */
+.unoslider_theme_light .unoslider_right {
+  background-position: -28px -27px;
+  right: 40px;
+}
+
+/* pause */
+.unoslider_theme_light .unoslider_pause {
+  background-position: -28px 0px;
+}
+
+/* play */
+.unoslider_theme_light .unoslider_play {
+  background-position: 0px 0px;
+}
+
+/* bullet indicator */
+.unoslider_theme_light .unoslider_indicator {
+  position: absolute;
+  left: 15px;
+  bottom: 5px;
+  text-align: left;
+  _text-align: right;
+  *text-align: right;
+  width: 20%;
+}
+.unoslider_theme_light .unoslider_indicator a {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  margin: 3px;
+  width: 17px;
+  height: 17px;
+  background-color: black;
+  background: url("light.png") no-repeat;
+  background-position: 0 -54px;
+}
+.unoslider_theme_light .unoslider_indicator a {
+  *display: inline;
+}
+.unoslider_theme_light .unoslider_indicator a.unoslider_indicator_active {
+  background-position: -19px -54px;
+}
+
+/* Hand cursor over navigation elements */
+.unoslider_theme_minimalist .unoslider_navigation {
+  cursor: pointer;
+}
+
+/* Tooltip panel */
+.unoslider_theme_minimalist .unoslider_caption {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  font-family: "Helvetica neue", Helvetica, Verdana, sans-serif;
+  padding: 10px 15px;
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  color: #c10941;
+  font-size: 15px;
+  text-shadow: white 0 1px 0;
+}
+
+/* play, pause, previous and next elements */
+.unoslider_theme_minimalist .unoslider_pause, .unoslider_theme_minimalist .unoslider_play, .unoslider_theme_minimalist .unoslider_left, .unoslider_theme_minimalist .unoslider_right {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  background: url("minimalist.png") no-repeat;
+}
+
+/* play and pause elements */
+.unoslider_theme_minimalist .unoslider_pause, .unoslider_theme_minimalist .unoslider_play {
+  height: 42px;
+  width: 42px;
+  margin-top: -21px;
+  margin-left: -21px;
+  top: 50%;
+  left: 50%;
+}
+
+/* previous and next elements */
+.unoslider_theme_minimalist .unoslider_left, .unoslider_theme_minimalist .unoslider_right {
+  width: 25px;
+  height: 25px;
+  margin-top: -12.5px;
+  top: 50%;
+}
+
+/* previous */
+.unoslider_theme_minimalist .unoslider_left {
+  background-position: 0px -89px;
+  left: -12.5px;
+}
+
+/* next */
+.unoslider_theme_minimalist .unoslider_right {
+  background-position: -28px -89px;
+  right: -12.5px;
+}
+
+/* pause */
+.unoslider_theme_minimalist .unoslider_pause {
+  background-position: 0px -43px;
+}
+
+/* play */
+.unoslider_theme_minimalist .unoslider_play {
+  background-position: 0px 0px;
+}
+
+/* bullet indicator */
+.unoslider_theme_minimalist .unoslider_indicator {
+  position: absolute;
+  bottom: -30px;
+  right: 10px;
+  width: 100%;
+  text-align: right;
+}
+.unoslider_theme_minimalist .unoslider_indicator a {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  background: #c10941;
+  margin: 3px;
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+}
+.unoslider_theme_minimalist .unoslider_indicator a {
+  *display: inline;
+}
+.unoslider_theme_minimalist .unoslider_indicator a.unoslider_indicator_active {
+  width: 13px;
+  height: 13px;
+}
+
+/* Hand cursor over navigation elements */
+.unoslider_theme_modern .unoslider_navigation {
+  cursor: pointer;
+}
+
+/* Tooltip panel */
+.unoslider_theme_modern .unoslider_caption {
+  position: absolute;
+  right: 16px;
+  bottom: 31px;
+  font-family: "Helvetica neue", Helvetica, Verdana, sans-serif;
+  padding: 0 15px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #144a72;
+  color: white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  font-size: 14px;
+  font-weight: normal;
+  text-shadow: black 0 1px 0;
+}
+
+/* play, pause, previous and next elements */
+.unoslider_theme_modern .unoslider_pause, .unoslider_theme_modern .unoslider_play, .unoslider_theme_modern .unoslider_left, .unoslider_theme_modern .unoslider_right {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  background: url("modern.png") no-repeat;
+}
+
+/* play and pause elements */
+.unoslider_theme_modern .unoslider_pause, .unoslider_theme_modern .unoslider_play {
+  height: 98px;
+  width: 98px;
+  margin-top: -49px;
+  margin-left: -49px;
+  top: 50%;
+  left: 50%;
+}
+
+/* previous and next elements */
+.unoslider_theme_modern .unoslider_left, .unoslider_theme_modern .unoslider_right {
+  width: 24px;
+  height: 24px;
+  bottom: 71px;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+.unoslider_theme_modern .unoslider_left:hover, .unoslider_theme_modern .unoslider_right:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+}
+
+/* previous */
+.unoslider_theme_modern .unoslider_left {
+  background-position: 8px -212px;
+  right: 40px;
+}
+
+/* next */
+.unoslider_theme_modern .unoslider_right {
+  background-position: -47px -212px;
+  right: 16px;
+}
+
+/* pause */
+.unoslider_theme_modern .unoslider_pause {
+  background-position: 0px -100px;
+}
+
+/* play */
+.unoslider_theme_modern .unoslider_play {
+  background-position: 0px 0px;
+}
+
+/* bullet indicator */
+.unoslider_theme_modern .unoslider_indicator {
+  position: absolute;
+  bottom: 10px;
+  right: 16px;
+  text-align: right;
+  padding: 5px 10px;
+  _width: 50%;
+  *width: 50%;
+  font-size: 0px;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+.unoslider_theme_modern .unoslider_indicator a {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  background: #81817e;
+  margin-right: 6px;
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+}
+.unoslider_theme_modern .unoslider_indicator a {
+  *display: inline;
+}
+.unoslider_theme_modern .unoslider_indicator a.unoslider_indicator_active {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border: 3px solid #81817e;
+}
+
+/* Hand cursor over navigation elements */
+.unoslider_theme_panel .unoslider_navigation {
+  cursor: pointer;
+}
+
+/* container which contains navigation and indicator */
+.unoslider_theme_panel .unoslider_navigation_container {
+  background: #e0e0e0;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efefef), color-stop(100%, #d3d3d3));
+  background: -webkit-linear-gradient(#efefef, #d3d3d3);
+  background: -moz-linear-gradient(#efefef, #d3d3d3);
+  background: -o-linear-gradient(#efefef, #d3d3d3);
+  background: -ms-linear-gradient(#efefef, #d3d3d3);
+  background: linear-gradient(#efefef, #d3d3d3);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #bfbfbf;
+  width: 40%;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  margin-left: -20%;
+}
+
+/* Tooltip panel */
+.unoslider_theme_panel .unoslider_caption {
+  position: absolute;
+  bottom: 40px;
+  left: -30px;
+  line-height: 30px;
+  padding: 5px 10px 5px 40px;
+  font-family: "Helvetica neue", Helvetica, Verdana, sans-serif;
+  background-color: #111111;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  color: #dbdbdb;
+  font-size: 14px;
+}
+
+/* play, pause, previous and next elements */
+.unoslider_theme_panel .unoslider_pause, .unoslider_theme_panel .unoslider_play, .unoslider_theme_panel .unoslider_left, .unoslider_theme_panel .unoslider_right {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  background: url("panel.png") no-repeat;
+}
+
+/* play and pause elements */
+.unoslider_theme_panel .unoslider_pause, .unoslider_theme_panel .unoslider_play {
+  height: 17px;
+  width: 15px;
+  margin-top: -8.5px;
+  margin-left: -7.5px;
+  top: 50%;
+  left: 40px;
+}
+
+/* previous and next elements */
+.unoslider_theme_panel .unoslider_left, .unoslider_theme_panel .unoslider_right {
+  width: 18px;
+  height: 25px;
+  margin-top: -12.5px;
+  top: 50%;
+}
+
+/* previous */
+.unoslider_theme_panel .unoslider_left {
+  background-position: -21px -21px;
+  left: 5px;
+}
+
+/* next */
+.unoslider_theme_panel .unoslider_right {
+  background-position: 0px -21px;
+  right: 5px;
+}
+
+/* pause */
+.unoslider_theme_panel .unoslider_pause {
+  background-position: 0px 0px;
+}
+
+/* play */
+.unoslider_theme_panel .unoslider_play {
+  background-position: -24px 0px;
+}
+
+/* bullet indicator */
+.unoslider_theme_panel .unoslider_indicator {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 26%;
+  margin-left: -13%;
+  text-align: center;
+  _text-align: right;
+  *text-align: right;
+}
+.unoslider_theme_panel .unoslider_indicator a {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  margin: 3px;
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  background: url("panel.png") no-repeat;
+  background-position: 0 -50px;
+}
+.unoslider_theme_panel .unoslider_indicator a {
+  *display: inline;
+}
+.unoslider_theme_panel .unoslider_indicator a.unoslider_indicator_active {
+  background-position: -16px -50px;
+}
+
+/* Hand cursor over navigation elements */
+.unoslider_theme_ribbon .unoslider_navigation {
+  cursor: pointer;
+}
+
+/* Tooltip panel */
+.unoslider_theme_ribbon .unoslider_caption {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  font-family: "Helvetica neue", Helvetica, Verdana, sans-serif;
+  text-shadow: black 0 1px 0;
+  padding: 10px 0px;
+  width: 100%;
+  background-color: #373737;
+  border-top: 1px solid #545454;
+  border-bottom: 1px solid #545454;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* play, pause, previous and next elements */
+.unoslider_theme_ribbon .unoslider_pause, .unoslider_theme_ribbon .unoslider_play, .unoslider_theme_ribbon .unoslider_left, .unoslider_theme_ribbon .unoslider_right {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  background: url("ribbon.png") no-repeat;
+}
+
+/* play and pause elements */
+.unoslider_theme_ribbon .unoslider_pause, .unoslider_theme_ribbon .unoslider_play {
+  height: 31px;
+  width: 28px;
+  margin-top: -15.5px;
+  margin-left: -14px;
+  top: 50%;
+  left: 50%;
+}
+
+/* previous and next elements */
+.unoslider_theme_ribbon .unoslider_left, .unoslider_theme_ribbon .unoslider_right {
+  width: 33px;
+  height: 64px;
+  margin-top: -32px;
+  top: 50%;
+}
+
+/* previous */
+.unoslider_theme_ribbon .unoslider_left {
+  background-position: 0px 0px;
+  left: -6px;
+}
+
+/* next */
+.unoslider_theme_ribbon .unoslider_right {
+  background-position: 0px -72px;
+  right: -6px;
+}
+
+/* pause */
+.unoslider_theme_ribbon .unoslider_pause {
+  background-position: 0px -195px;
+}
+
+/* play */
+.unoslider_theme_ribbon .unoslider_play {
+  background-position: 0px -150px;
+}
+
+/* bullet indicator */
+.unoslider_theme_ribbon .unoslider_indicator {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  _text-align: right;
+  *text-align: right;
+}
+.unoslider_theme_ribbon .unoslider_indicator a {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  margin: 3px;
+  width: 11px;
+  height: 11px;
+  background-color: black;
+  background: url("ribbon.png") no-repeat;
+  background-position: 0 -238px;
+}
+.unoslider_theme_ribbon .unoslider_indicator a {
+  *display: inline;
+}
+.unoslider_theme_ribbon .unoslider_indicator a.unoslider_indicator_active {
+  background-position: 0px -255px;
+  -webkit-border-radius: 90px;
+  -moz-border-radius: 90px;
+  -ms-border-radius: 90px;
+  -o-border-radius: 90px;
+  border-radius: 90px;
+  -webkit-box-shadow: 0px 0px 5px #fb0000;
+  -moz-box-shadow: 0px 0px 5px #fb0000;
+  box-shadow: 0px 0px 5px #fb0000;
+}
+
+/* Hand cursor over navigation elements */
+.unoslider_theme_slick .unoslider_navigation {
+  cursor: pointer;
+}
+
+/* Tooltip panel */
+.unoslider_theme_slick .unoslider_caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: "Helvetica neue", Helvetica, Verdana, sans-serif;
+  padding: 10px 0px;
+  width: 100%;
+  background-color: #333333;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* play, pause, previous and next elements */
+.unoslider_theme_slick .unoslider_pause, .unoslider_theme_slick .unoslider_play, .unoslider_theme_slick .unoslider_left, .unoslider_theme_slick .unoslider_right {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  background: url("slick.png") no-repeat;
+}
+
+/* play and pause elements */
+.unoslider_theme_slick .unoslider_pause, .unoslider_theme_slick .unoslider_play {
+  height: 72px;
+  width: 72px;
+  margin-top: -36px;
+  margin-left: -36px;
+  top: 50%;
+  left: 50%;
+}
+
+/* previous and next elements */
+.unoslider_theme_slick .unoslider_left, .unoslider_theme_slick .unoslider_right {
+  width: 41px;
+  height: 74px;
+  margin-top: -37px;
+  top: 50%;
+}
+
+/* previous */
+.unoslider_theme_slick .unoslider_left {
+  background-position: 0px -151px;
+  left: -40px;
+}
+
+/* next */
+.unoslider_theme_slick .unoslider_right {
+  background-position: -43px -151px;
+  right: -40px;
+}
+
+/* pause */
+.unoslider_theme_slick .unoslider_pause {
+  background-position: 0px -74px;
+}
+
+/* play */
+.unoslider_theme_slick .unoslider_play {
+  background-position: 0px 0px;
+}
+
+/* bullet indicator */
+.unoslider_theme_slick .unoslider_indicator {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  _text-align: right;
+  *text-align: right;
+}
+.unoslider_theme_slick .unoslider_indicator a {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  margin: 3px;
+  width: 11px;
+  height: 11px;
+  background-color: black;
+  background: url("slick.png") no-repeat;
+  background-position: 0 -230px;
+}
+.unoslider_theme_slick .unoslider_indicator a {
+  *display: inline;
+}
+.unoslider_theme_slick .unoslider_indicator a.unoslider_indicator_active {
+  background-position: -13px -230px;
+}
+
+/* Hand cursor over navigation elements */
+.unoslider_theme_smooth .unoslider_navigation {
+  cursor: pointer;
+}
+
+/* container which contains navigation and indicator */
+.unoslider_theme_smooth .unoslider_navigation_container {
+  background: #343434;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #404040), color-stop(100%, #292929));
+  background: -webkit-linear-gradient(#404040, #292929);
+  background: -moz-linear-gradient(#404040, #292929);
+  background: -o-linear-gradient(#404040, #292929);
+  background: -ms-linear-gradient(#404040, #292929);
+  background: linear-gradient(#404040, #292929);
+  border-top: 1px solid #4d4d4d;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/* Tooltip panel */
+.unoslider_theme_smooth .unoslider_caption {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  font-family: "Helvetica neue", Helvetica, Verdana, sans-serif;
+  line-height: 30px;
+  color: #dbdbdb;
+  font-size: 12px;
+  text-shadow: black 0 1px 0;
+}
+
+/* play, pause, previous and next elements */
+.unoslider_theme_smooth .unoslider_pause, .unoslider_theme_smooth .unoslider_play, .unoslider_theme_smooth .unoslider_left, .unoslider_theme_smooth .unoslider_right {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  background: url("smooth.png") no-repeat;
+}
+
+/* play and pause elements */
+.unoslider_theme_smooth .unoslider_pause, .unoslider_theme_smooth .unoslider_play {
+  height: 27px;
+  width: 23px;
+  margin-top: -13.5px;
+  margin-left: -11.5px;
+  top: 50%;
+  left: 50px;
+}
+
+/* previous and next elements */
+.unoslider_theme_smooth .unoslider_left, .unoslider_theme_smooth .unoslider_right {
+  width: 25px;
+  height: 22px;
+  margin-top: -11px;
+  top: 50%;
+}
+
+/* previous */
+.unoslider_theme_smooth .unoslider_left {
+  background-position: 0px 0px;
+  left: 5px;
+}
+
+/* next */
+.unoslider_theme_smooth .unoslider_right {
+  background-position: -29px 0px;
+  right: 5px;
+}
+
+/* pause */
+.unoslider_theme_smooth .unoslider_pause {
+  background-position: -31px -25px;
+}
+
+/* play */
+.unoslider_theme_smooth .unoslider_play {
+  background-position: 0px -25px;
+}
+
+/* bullet indicator */
+.unoslider_theme_smooth .unoslider_indicator {
+  position: absolute;
+  right: 40px;
+  bottom: 3px;
+  width: 50%;
+  text-align: right;
+}
+.unoslider_theme_smooth .unoslider_indicator a {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  margin: 3px;
+  width: 14px;
+  height: 14px;
+  background-color: black;
+  background: url("smooth.png") no-repeat;
+  background-position: 0 -53px;
+}
+.unoslider_theme_smooth .unoslider_indicator a {
+  *display: inline;
+}
+.unoslider_theme_smooth .unoslider_indicator a.unoslider_indicator_active {
+  background-position: -19px -53px;
+}
+
+/* Hand cursor over navigation elements */
+.unoslider_theme_square .unoslider_navigation {
+  cursor: pointer;
+}
+
+/* Tooltip panel */
+.unoslider_theme_square .unoslider_caption {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  font-family: "Helvetica neue", Helvetica, Verdana, sans-serif;
+  padding: 10px 0px;
+  width: auto;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* play, pause, previous and next elements */
+.unoslider_theme_square .unoslider_pause, .unoslider_theme_square .unoslider_play, .unoslider_theme_square .unoslider_left, .unoslider_theme_square .unoslider_right {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  background: url("square.png") no-repeat;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+.unoslider_theme_square .unoslider_pause:hover, .unoslider_theme_square .unoslider_play:hover, .unoslider_theme_square .unoslider_left:hover, .unoslider_theme_square .unoslider_right:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+
+/* play and pause elements */
+.unoslider_theme_square .unoslider_pause, .unoslider_theme_square .unoslider_play {
+  height: 53px;
+  width: 53px;
+  margin-top: -26.5px;
+  margin-left: -26.5px;
+  top: 50%;
+  left: 50%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* previous and next elements */
+.unoslider_theme_square .unoslider_left, .unoslider_theme_square .unoslider_right {
+  width: 27px;
+  height: 55px;
+  margin-top: -27.5px;
+  top: 50%;
+}
+
+/* previous */
+.unoslider_theme_square .unoslider_left {
+  background-position: 5px -48px;
+  left: -27px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* next */
+.unoslider_theme_square .unoslider_right {
+  background-position: -54px -48px;
+  right: -27px;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+/* pause */
+.unoslider_theme_square .unoslider_pause {
+  background-position: 13.5px 10px;
+}
+
+/* play */
+.unoslider_theme_square .unoslider_play {
+  background-position: -75px 13px;
+}
+
+/* bullet indicator */
+.unoslider_theme_square .unoslider_indicator {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  text-align: center;
+  _text-align: right;
+  *text-align: right;  
+  overflow: hidden;
+}
+.unoslider_theme_square .unoslider_indicator a {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  overflow: visible;
+  cursor: pointer;
+  background: black;
+  margin: 3px;
+  width: 12px;
+  height: 12px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+.unoslider_theme_square .unoslider_indicator a {
+  *display: inline;
+}
+.unoslider_theme_square .unoslider_indicator a.unoslider_indicator_active, .unoslider_theme_square .unoslider_indicator a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border: 3px solid black;
+}
+
+/* Hand cursor over navigation elements */
+.unoslider_theme_text .unoslider_navigation {
+  cursor: pointer;
+}
+
+/* Tooltip panel */
+.unoslider_theme_text .unoslider_caption {
+  position: absolute;
+  bottom: 70px;
+  left: 0px;
+  font-family: "Helvetica neue", Helvetica, Verdana, sans-serif;
+  padding: 10px 20px;
+  width: auto;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* play, pause, previous and next elements */
+.unoslider_theme_text .unoslider_pause, .unoslider_theme_text .unoslider_play, .unoslider_theme_text .unoslider_left, .unoslider_theme_text .unoslider_right {
+  position: absolute;
+  display: block;
+  font-family: "Helvetica neue", Helvetica, Verdana, sans-serif;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 5px 15px;
+}
+.unoslider_theme_text .unoslider_pause:hover, .unoslider_theme_text .unoslider_play:hover, .unoslider_theme_text .unoslider_left:hover, .unoslider_theme_text .unoslider_right:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+
+/* play and pause elements */
+.unoslider_theme_text .unoslider_pause, .unoslider_theme_text .unoslider_play {
+  height: auto;
+  width: auto;
+  margin-top: -auto/2;
+  margin-left: -auto/2;
+  top: 0px;
+  right: 0px;
+}
+
+/* previous and next elements */
+.unoslider_theme_text .unoslider_left, .unoslider_theme_text .unoslider_right {
+  width: auto;
+  height: auto;
+  bottom: 20px;
+}
+
+/* previous */
+.unoslider_theme_text .unoslider_left {
+  left: 0;
+}
+
+/* next */
+.unoslider_theme_text .unoslider_right {
+  right: 0;
+}
+
+/* bullet indicator */
+.unoslider_theme_text .unoslider_indicator {
+  position: absolute;
+  bottom: 60px;
+  right: 0px;
+  text-align: right;
+  height: 23px;
+  line-height: 15px;
+  background: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+.unoslider_theme_text .unoslider_indicator a {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  margin: 3px;
+  width: 12px;
+  height: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+.unoslider_theme_text .unoslider_indicator a {
+  *display: inline;
+}
+.unoslider_theme_text .unoslider_indicator a.unoslider_indicator_active, .unoslider_theme_text .unoslider_indicator a:hover {
+  color: #00bbd7;
+}
+
+/* 
+ * Here you can crete your custom theme. 
+ * Make sure every rule is prefixed with the ".unoslider_theme_custom" class 
+ */
+
+/* The navigation container */
+.unoslider_theme_custom .unoslider_navigation_container {}
+
+/* All navigation elements (play, pause, prev and next)  */
+.unoslider_theme_custom .unoslider_navigation {}
+
+/* The caption */
+.unoslider_theme_custom .unoslider_caption {}
+
+/* Play, pause, previous and next elements */
+.unoslider_theme_custom .unoslider_pause {}
+.unoslider_theme_custom .unoslider_play {}
+.unoslider_theme_custom .unoslider_left {}
+.unoslider_theme_custom .unoslider_right {}
+
+.unoslider_theme_custom .unoslider_pause:hover {}
+.unoslider_theme_custom .unoslider_play:hover {}
+.unoslider_theme_custom .unoslider_left:hover {}
+.unoslider_theme_custom .unoslider_right:hover {}
+
+
+/* Bullet indicator container */
+.unoslider_theme_custom .unoslider_indicator {}
+
+/* Bullet indicator item */
+.unoslider_theme_custom .unoslider_indicator a {}
+
+/* Active bullet in the bullet indicator */
+.unoslider_theme_custom .unoslider_indicator a.unoslider_indicator_active {}

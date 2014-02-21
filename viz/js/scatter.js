@@ -31,12 +31,26 @@ var yScale = d3.scale
 
 middle_age = (min_age + max_age) / 2;
 var infobox = d3.select("#infobox");
+var titleSvg = d3.select("#titlecontainer").append("svg")
+    .attr("viewBox", "0 0 " + width + " 70")
+    // .attr("height", 80)
+    .classed("svg-content", true)
+    .attr("preserveAspectRatio", "xMidYMid")
+    .attr("id", "title");
 
 var svg = d3.select("#quadcontainer").append("svg")
+    .classed("svg-content", true)
     .attr("viewBox", "0 0 " + width + " " + height)
     .attr("preserveAspectRatio", "xMidYMid")
     .attr("id", "quad");
 
+titleSvg.append("text")
+        .attr("class", "title")
+        .attr("text-anchor", "start")
+        .attr("dy", "25px")
+        .attr("textLength", width)
+        .style("font-size", "25px")
+        .text("Party candidates in the 2009 General Election");
 
 //gridlines
 svg.append("path")
@@ -45,18 +59,20 @@ svg.append("path")
     var d = "";
 
     for (var i = gridSpacing; i < width; i += gridSpacing ) {
-      d += "M"+i+",0 L"+i+","+height;
+      d += "M"+i+",0 L"+i+","+height+" ";
     }
 
     for (var i = gridSpacing; i < height; i += gridSpacing ) {
-      d += "M0,"+i+" L"+width+","+i;
+      d += "M0,"+i+" L"+width+","+i+" ";
     }
     return d;
-  })
+  });
 
 
-d3.json("parties.json", function(error, json) {
-    if (error) return console.warn(error);
+d3.json("../viz/parties.json", function(error, json) {
+    if (error) {
+        return console.warn(error);
+    }
     itemList = json;
 
     /************************ Side bar **********************/
@@ -68,7 +84,7 @@ d3.json("parties.json", function(error, json) {
         .outerRadius(pie_radius - 10)
         .innerRadius(0);
 
-    var pie = d3.layout.pie().sort(null)
+    var pie = d3.layout.pie().sort(null);
 
 
     display_infobox = function(d) {
@@ -99,12 +115,12 @@ d3.json("parties.json", function(error, json) {
         d3.select("#oldest_members").selectAll("small").data(d.oldest).enter().append("small")
             .text(function(d2) {
                 return d2[0].toProperCase() + " (" + d2[2] + ") | "
-            });
+        });
 
 
         var draw_pie = function(el, data, labels, title) {
-            var data_size = data.length
-            el.selectAll("svg").remove()
+            var data_size = data.length;
+            el.selectAll("svg").remove();
             var svg = el.append("svg")
                 .attr("class", "pie");
 
@@ -113,7 +129,7 @@ d3.json("parties.json", function(error, json) {
                 .attr("text-anchor", "middle")
                 .attr("y", 10)
                 .attr("x", 45)
-                .text(title)
+                .text(title);
 
             svg.selectAll("g")
                 .data(pie(data)).enter().append("g")
@@ -170,6 +186,7 @@ d3.json("parties.json", function(error, json) {
         return yScale(perc);
     }
     
+    
 
     //One group per item
     var items = svg.selectAll("g.item")
@@ -183,6 +200,7 @@ d3.json("parties.json", function(error, json) {
         .enter()
         .append("g")
         .attr("class","item");
+
 
 
     var yAxis = d3.svg.axis()
@@ -290,7 +308,7 @@ d3.json("parties.json", function(error, json) {
             return d.x;
         })
         .attr("cy", yScale(50)) // start off in the center before animating
-        .style("fill", function(d, i) { console.log(d.abbr, d.males + d.females); return color_scale(d.males + d.females); })
+        .style("fill", function(d, i) { return color_scale(d.males + d.females); })
         .on("mouseover", display_infobox)
         .on("mousedown", function(d) {
             d3.select(this).classed("clicking", true)
@@ -358,46 +376,83 @@ d3.json("parties.json", function(error, json) {
     redrawLabels();
 });
 
-var origWidth = 0;
+// getPageScroll() by quirksmode.com
+function getPageScroll() {
+    var xScroll, yScroll;
+    if (self.pageYOffset) {
+      yScroll = self.pageYOffset;
+      xScroll = self.pageXOffset;
+    } else if (document.documentElement && document.documentElement.scrollTop) {
+      yScroll = document.documentElement.scrollTop;
+      xScroll = document.documentElement.scrollLeft;
+    } else if (document.body) {// all other Explorers
+      yScroll = document.body.scrollTop;
+      xScroll = document.body.scrollLeft;
+    }
+    return new Array(xScroll,yScroll)
+}
+
+// Adapted from getPageSize() by quirksmode.com
+function getPageHeight() {
+    var windowHeight
+    if (self.innerHeight) { // all except Explorer
+      windowHeight = self.innerHeight;
+    } else if (document.documentElement && document.documentElement.clientHeight) {
+      windowHeight = document.documentElement.clientHeight;
+    } else if (document.body) { // other Explorers
+      windowHeight = document.body.clientHeight;
+    }
+    return windowHeight
+}
+
+function findPos(obj) {
+    var curleft = curtop = 0;
+    if (obj.offsetParent) do {
+        curleft += obj.offsetLeft;
+        curtop += obj.offsetTop;
+    } while (obj = obj.offsetParent);
+    return [curleft,curtop];
+}
+
 document.getElementById('embiggen_container').onclick = function() {
     if (this.className.search(/\bembiggen\b/gi) == -1) {
-        var offsetTop = this.offsetTop;
+        var pageScroll = getPageScroll();
+        var pos = findPos(this);
+        var offsetTop = pos[1] - pageScroll[1];
+
         var marginTop = (offsetTop * -1) + 20;
         origWidth = this.offsetWidth;
         origHeight = this.offsetHeight;
         origMarginLeft = this.marginLeft;
         origMarginTop = this.marginTop;
         origStyle = this.style;
-        console.log(origWidth);
         this.style.zIndex = 5000;
         this.style.width = (parseInt(window.innerWidth) - 40) + "px";
         this.style.height = (parseInt(window.innerHeight) - 20) + "px";
-        this.style.position = "absolute";
-        this.style.top = offsetTop + "px";
+        this.style.position = "fixed";
+        this.style.top = (offsetTop) + "px";
         this.style.marginTop = marginTop + "px";
         this.style.marginLeft = "20px";
         this.style.overflowY = "scroll";
         d3.select(this).classed("embiggen", true);
-
+        d3.select("#overlay").attr("style", "display: block; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: #000; opacity: 0.6; z-index: 4999")
+        document.getElementById("overlay").onclick = function(e) { closePopup(e)};
         document.getElementById('close').onclick = function(e) {
+            closePopup(e);
+        };
 
-            console.log(origWidth);
-            var el = this.parentNode;
+        var closePopup = function(e) {
+            d3.select("#overlay").attr("style", "display: none");
+            var el = document.getElementById("embiggen_container");
             el.className = el.className.replace(/\banimate\b/gi, '');
-            console.log(el.className.replace(/\bembiggen\b/gi, ''));
             el.className = el.className.replace(/\bembiggen\b/gi, '');
-            el.removeAttribute("style");
-            // el.style.overflowY = "none";
-            // el.style.position = "relative";
-            // el.style.width = origWidth + "px";
-            // el.style.height = origHeight + "px";
-            // el.style.marginLeft = origMarginLeft + "px";
-            // el.style.marginTop = origMarginTop + "px";
-            // el.style = origStyle;
+            d3.select(el).attr("style", "display: block; position: relative; z-index: 5000");
             e.stopPropagation();
             el.className += "animate";
         }
     };
+
+    
 
 
 
