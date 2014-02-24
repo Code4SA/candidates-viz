@@ -5297,7 +5297,7 @@ button.code4sa-embed .close {
 }
 .code4sa-embed #embiggen_container {
   border: 1px #CCC solid;
-  width: 620px;
+  width: 100%;
   height: auto;
   position: relative;
   display: block;
@@ -5321,6 +5321,9 @@ button.code4sa-embed .close {
 }
 .code4sa-embed #embiggen_container.embiggen #close {
   opacity: 1;
+}
+.code4sa-embed #embiggen_container.embiggen #quadcontainer {
+  width: 620px;
 }
 .code4sa-embed #close {
   transition: opacity 1s;
@@ -5383,7 +5386,8 @@ button.code4sa-embed .close {
   float: left;
 }
 .code4sa-embed .embiggen #infobox {
-  left: 640px;
+  left: 650px;
+  position: absolute;
 }
 .code4sa-embed svg {
   max-height: 100%;

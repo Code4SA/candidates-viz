@@ -90,16 +90,15 @@ text {
   font: 12px sans-serif;
 }
 
-#quad {
-}
-
 #embiggen_container {
   border: 1px #CCC solid;
-  width: 620px;
+  width: 100%;
   height: auto;
   position: relative;
   display: block;
   max-height: 90%;
+
+
 }
 
 .small {
@@ -121,8 +120,14 @@ text {
   opacity: 0;
 }
 
-#embiggen_container.embiggen #close {
-  opacity: 1;
+#embiggen_container.embiggen {
+	#close {
+  		opacity: 1;
+	}
+
+  	#quadcontainer {
+  		width: 620px;
+  	}
 }
 
 #close {
@@ -198,7 +203,8 @@ left: 0;
 
 	#infobox {
 		// float: left;
-		left: 640px;
+		left: 650px;
+		position: absolute;
 	}
 }
 
