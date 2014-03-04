@@ -10,19 +10,19 @@ Code4SA.app = (function(window,document,undefined) {
     // Options
     var pie_colors = ["#ca0020", "#92c5de", "#f4a582", "#0571b0"];
     
-    var width = 620,
+    var width = 640,
         height = 450,
         gridSpacing = 40;
 
-    var aspect = width / height;
+    // var aspect = width / height;
 
     var min_radius = 8,
         max_radius = 30;
 
     var min_age = 35,
         max_age = 57,
-        min_women = 10,
-        max_women = 90,
+        // min_women = 10,
+        // max_women = 90,
         middle_age = (min_age + max_age) / 2;
 
     var display_infobox = function(d) {
@@ -39,6 +39,7 @@ Code4SA.app = (function(window,document,undefined) {
         d3.selectAll("circle.party").classed("active", false);
         d3.select(this.parentNode).select("circle").classed("active", true);
         d3.select("#party_info").style("display", "block");
+        // d3.select("#howto").style("display", "block");
         d3.select("#lbl_party").text(d.party.toProperCase());
         d3.select("#lbl_total").text(total);
         d3.select("#lbl_males").text(parseInt(d.males / total * 100));
@@ -48,19 +49,31 @@ Code4SA.app = (function(window,document,undefined) {
         d3.select("#lbl_middle").text(parseInt(d.middle / total * 100));
         d3.select("#lbl_old").text(parseInt(d.old / total * 100));
         d3.select("#lbl_vold").text(d.vold);
-        d3.selectAll("#youngest_members small").remove();
+        d3.selectAll("#youngest_members li").remove();
+
         d3.select("#youngest_members")
-            .selectAll("small")
-            .data(d.youngest).enter()
-            .append("small")
-            .text(function(d2) {
-                return d2[0].toProperCase() + " (" + d2[2] + ") | "
-            });
-        d3.selectAll("#oldest_members small").remove();
-        d3.select("#oldest_members").selectAll("small").data(d.oldest).enter().append("small")
-            .text(function(d2) {
-                return d2[0].toProperCase() + " (" + d2[2] + ") | "
-            });
+            .selectAll("ul")
+                .classed({ "small": true })
+            .selectAll("li")
+            .data(d.youngest)
+            .enter()
+                .insert("li")
+                .text(function(d2) {
+                    return d2[0].toProperCase() + " (" + d2[2] + ")"
+                });
+
+
+        d3.selectAll("#oldest_members li").remove();
+        d3.select("#oldest_members")
+            .selectAll("ul")
+                .classed({ "small": true })
+            .selectAll("li")
+            .data(d.oldest)
+            .enter()
+                .append("li")
+                .text(function(d2) {
+                    return d2[0].toProperCase() + " (" + d2[2] + ")"
+                });
         
         var draw_pie = function(el, data, labels, title, pie) {
             var data_size = data.length;
@@ -120,7 +133,7 @@ Code4SA.app = (function(window,document,undefined) {
         var infobox = d3.select("#infobox");
         
         var titleSvg = d3.select("#titlecontainer").append("svg")
-            .attr("viewBox", "0 0 " + width + " 70")
+            .attr("viewBox", "0 0 " + width + " 40")
             // .attr("height", 80)
             .classed("svg-content", true)
             .attr("preserveAspectRatio", "xMidYMid")
@@ -132,7 +145,7 @@ Code4SA.app = (function(window,document,undefined) {
             .attr("dy", "25px")
             .attr("textLength", width)
             .style("font-size", "25px")
-            .text("Party candidates in the 2009 General Election");
+            .text("Age and gender balance in the 2009 General Election");
 
         var svg = d3.select("#quadcontainer").append("svg")
             .classed("svg-content", true)
@@ -316,73 +329,73 @@ Code4SA.app = (function(window,document,undefined) {
                 .attr("cy", function(d) { return d.y; });
 
 
-                var label_array = JSON.parse(JSON.stringify(itemList)) // deep copy
-                var labels = items.append("text")
-                    .attr("class", "text-label")
-                    .style("font-size", function(d) {
-                        return font_scale(d.total) + "em";
-                    })
-                    .attr("y", yScale(50)) // start off in the center before animating
-                    .attr("x", function(d) { return d.x; })
-                    .attr("dy","1.2em")
-                    .attr("text-anchor","middle")
-                    .text(function(d) { return d.abbr; })
-                    .each(function(d, i) {
-                        label_array[i].x = d.x;
-                        label_array[i].y = d.y;
-                        label_array[i].name = d.abbr;
-                        label_array[i].width = this.getBBox().width;
-                        label_array[i].height = this.getBBox().height;
-                        d.name = d.abbr;
-                        d.width = this.getBBox().width;
-                        d.height = this.getBBox().height;
-                        return i;
-                    })
-                    .on("mouseover", display_infobox)
-                    .on("mousedown", function(d) {
-                        d3.select(this).classed("clicked", true);
-                        display_infobox(d);
-                    })
-                    .on("mouseup", function() {
-                        d3.select(this).classed("clicked", false);
-                    })
-                    .transition().delay(40).ease("bounce").duration(1000)
-                    .attr("y", function(d) { return d.y; });
-                
-                /* Labeler */
-                var sim_ann = d3.labeler()
-                    .label(itemList)
-                    .anchor(label_array)
-                    .width(width)
-                    .height(height)
+            var label_array = JSON.parse(JSON.stringify(itemList)); // deep copy
+            var labels = items.append("text")
+                .attr("class", "text-label")
+                .style("font-size", function(d) {
+                    return font_scale(d.total) + "em";
+                })
+                .attr("y", yScale(50)) // start off in the center before animating
+                .attr("x", function(d) { return d.x; })
+                .attr("dy","1.2em")
+                .attr("text-anchor","middle")
+                .text(function(d) { return d.abbr; })
+                .each(function(d, i) {
+                    label_array[i].x = d.x;
+                    label_array[i].y = d.y;
+                    label_array[i].name = d.abbr;
+                    label_array[i].width = this.getBBox().width;
+                    label_array[i].height = this.getBBox().height;
+                    d.name = d.abbr;
+                    d.width = this.getBBox().width;
+                    d.height = this.getBBox().height;
+                    return i;
+                })
+                .on("mouseover", display_infobox)
+                .on("mousedown", function(d) {
+                    d3.select(this).classed("clicked", true);
+                    display_infobox(d);
+                })
+                .on("mouseup", function() {
+                    d3.select(this).classed("clicked", false);
+                })
+                .transition().delay(40).ease("bounce").duration(1000)
+                .attr("y", function(d) { return d.y; });
+            
+            /* Labeler */
+            var sim_ann = d3.labeler()
+                .label(itemList)
+                .anchor(label_array)
+                .width(width)
+                .height(height)
 
-                function redrawLabels() {
-                    // Redraw labels and leader lines
-                    labels.transition()
-                        .duration(800)
-                        .attr("x", function(d) { return (d.x); })
-                        .attr("y", function(d) { return (d.y); });
-                };
-                
-                sim_ann.start(1000);
-                redrawLabels();
+            function redrawLabels() {
+                // Redraw labels and leader lines
+                labels.transition()
+                    .duration(800)
+                    .attr("x", function(d) { return (d.x); })
+                    .attr("y", function(d) { return (d.y); });
+            };
+            
+            sim_ann.start(1000);
+            redrawLabels();
             
         }); //d3.json("../viz/parties.json", function(error, json) {
 
         
-
+        // Make it expand on click
         document.getElementById('embiggen_container').onclick = function() {
-            if (this.className.search(/\bembiggen\b/gi) == -1) {
+            if (this.className.search(/\bembiggen\b/gi) === -1) {
                 var pageScroll = getPageScroll();
                 var pos = findPos(this);
                 var offsetTop = pos[1] - pageScroll[1];
 
                 var marginTop = (offsetTop * -1) + 20;
-                origWidth = this.offsetWidth;
-                origHeight = this.offsetHeight;
-                origMarginLeft = this.marginLeft;
-                origMarginTop = this.marginTop;
-                origStyle = this.style;
+                var origWidth = this.offsetWidth;
+                var origHeight = this.offsetHeight;
+                var origMarginLeft = this.marginLeft;
+                var origMarginTop = this.marginTop;
+                var origStyle = this.style;
                 this.style.zIndex = 5000;
                 this.style.width = (parseInt(window.innerWidth) - 40) + "px";
                 this.style.height = (parseInt(window.innerHeight) - 20) + "px";
@@ -392,24 +405,35 @@ Code4SA.app = (function(window,document,undefined) {
                 this.style.marginLeft = "20px";
                 this.style.overflowY = "scroll";
                 d3.select(this).classed("embiggen", true);
-                d3.select("#overlay").attr("style", "display: block; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: #000; opacity: 0.6; z-index: 4999")
-                document.getElementById("overlay").onclick = function(e) { closePopup(e)};
+                d3.select("#vizcontainer").classed("col-md-12", false).classed("col-md-9", true);
+                d3.select("#overlay").attr("style", "display: block; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: #000; opacity: 0.6; z-index: 4999");
+                document.getElementById("overlay").onclick = function(e) { closePopup(e); };
                 document.getElementById('close').onclick = function(e) {
                     closePopup(e);
                 };
 
                 var closePopup = function(e) {
                     d3.select("#overlay").attr("style", "display: none");
+                    d3.select("#vizcontainer").classed("col-md-9", false).classed("col-md-12", true);
                     var el = document.getElementById("embiggen_container");
                     el.className = el.className.replace(/\banimate\b/gi, '');
                     el.className = el.className.replace(/\bembiggen\b/gi, '');
                     d3.select(el).attr("style", "display: block; position: relative; z-index: 5000");
                     e.stopPropagation();
                     el.className += "animate";
-                }
-            };
+                };
+            }
+        };
+
+        window.onresize = function(e) {
+            // console.log("Resize", e);
+            var el = document.getElementById("embiggen_container");
+            if (el.className.search(/\bembiggen\b/gi) !== -1) {
+                el.style.width = (parseInt(window.innerWidth) - 40) + "px";
+                el.style.height = (parseInt(window.innerHeight) - 20) + "px";
+            }
         }
-    } //Init
+    }; //Init
 
 
 
@@ -426,12 +450,12 @@ Code4SA.app = (function(window,document,undefined) {
           yScroll = document.body.scrollTop;
           xScroll = document.body.scrollLeft;
         }
-        return new Array(xScroll,yScroll)
+        return new Array(xScroll,yScroll);
     }
 
     // Adapted from getPageSize() by quirksmode.com
     function getPageHeight() {
-        var windowHeight
+        var windowHeight;
         if (self.innerHeight) { // all except Explorer
           windowHeight = self.innerHeight;
         } else if (document.documentElement && document.documentElement.clientHeight) {
@@ -439,19 +463,21 @@ Code4SA.app = (function(window,document,undefined) {
         } else if (document.body) { // other Explorers
           windowHeight = document.body.clientHeight;
         }
-        return windowHeight
+        return windowHeight;
     }
 
     function findPos(obj) {
-        var curleft = curtop = 0;
+        var curleft = 0,
+        curtop = 0;
+
         if (obj.offsetParent) do {
             curleft += obj.offsetLeft;
             curtop += obj.offsetTop;
         } while (obj = obj.offsetParent);
-        return [curleft,curtop];
+        return [curleft, curtop];
     }
 
     return {
-        init: function() { return self.init() }
-    }
+        init: function() { return self.init(); }
+    };
 })(this, this.document);

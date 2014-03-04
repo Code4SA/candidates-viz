@@ -1,5 +1,7 @@
 .code4sa-embed {
   /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+  font-family: sans-serif;
+  font-size: 12px;
 }
 .code4sa-embed html {
   font-family: sans-serif;
@@ -5303,32 +5305,25 @@ button.code4sa-embed .close {
   display: block;
   max-height: 90%;
 }
-.code4sa-embed .small {
-  width: 400px;
-  height: 400px;
-  position: absolute;
-}
 .code4sa-embed #overlay {
   opacity: 0;
   transition: opacity 1s;
   -webkit-transition: opacity 1s;
 }
 .code4sa-embed #close {
-  right: 5px;
-  top: 5px;
-  position: absolute;
+  right: 25px;
+  top: 25px;
+  position: fixed;
   opacity: 0;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  z-index: 6000;
 }
 .code4sa-embed #embiggen_container.embiggen #close {
   opacity: 1;
 }
 .code4sa-embed #embiggen_container.embiggen #quadcontainer {
   width: 620px;
-}
-.code4sa-embed #close {
-  transition: opacity 1s;
-  -webkit-transition: opacity 1s;
-  z-index: 6000;
 }
 .code4sa-embed .animate {
   transition: width 1s, height 1s, transform 1s, position 1s, margin 1s;
@@ -5342,6 +5337,7 @@ button.code4sa-embed .close {
 }
 .code4sa-embed #party_info {
   display: none;
+  max-width: 400px;
 }
 .code4sa-embed .yaxis path,
 .code4sa-embed .yaxis line {
@@ -5361,13 +5357,12 @@ button.code4sa-embed .close {
   stroke: black;
   shape-rendering: crispEdges;
 }
+.code4sa-embed .text-label {
+  font-weight: bold;
+  font-size: 14px;
+}
 .code4sa-embed .text-label:hover {
   cursor: pointer;
-}
-.code4sa-embed text.pie.label,
-.code4sa-embed text.pie.legend {
-  font-family: sans-serif;
-  font-size: 12px;
 }
 .code4sa-embed .svg-container {
   display: inline-block;
@@ -5381,13 +5376,11 @@ button.code4sa-embed .close {
   top: 0;
   left: 0;
 }
-.code4sa-embed .embiggen #vizcontainer {
-  max-width: 620px;
-  float: left;
+.code4sa-embed .piped li:before {
+  content: "| ";
 }
-.code4sa-embed .embiggen #infobox {
-  left: 650px;
-  position: absolute;
+.code4sa-embed .piped li:first-child:before {
+  content: "";
 }
 .code4sa-embed svg {
   max-height: 100%;

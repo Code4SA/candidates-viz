@@ -45,6 +45,9 @@
 @import "../libraries/bootstrap-3.1.1/less/utilities.less";
 @import "../libraries/bootstrap-3.1.1/less/responsive-utilities.less";
 
+font-family: sans-serif;
+font-size: 12px;
+
 .grid {
   stroke-width: 0.5px;
   stroke: steelblue;
@@ -97,14 +100,6 @@ text {
   position: relative;
   display: block;
   max-height: 90%;
-
-
-}
-
-.small {
-  width: 400px;
-  height: 400px;
-  position: absolute;
 }
 
 #overlay {
@@ -114,10 +109,13 @@ text {
 }
 
 #close {
-  right: 5px;
-  top: 5px;
-  position: absolute;
+  right: 25px;
+  top: 25px;
+  position: fixed;
   opacity: 0;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  z-index: 6000;
 }
 
 #embiggen_container.embiggen {
@@ -128,12 +126,6 @@ text {
   	#quadcontainer {
   		width: 620px;
   	}
-}
-
-#close {
-  transition: opacity 1s;
-  -webkit-transition: opacity 1s;
-  z-index: 6000;
 }
 
 .animate {
@@ -151,7 +143,12 @@ text {
 
 #party_info {
     display: none;
+    max-width: 400px;
 }
+
+// #howto {
+//   max-width: 400px;
+// }
 
 .yaxis path, .yaxis line {
     fill: none;
@@ -171,14 +168,15 @@ text {
     shape-rendering: crispEdges;
 }
 
+.text-label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
 .text-label:hover {
   cursor: pointer;
 }
 
-text.pie.label, text.pie.legend {
-    font-family: sans-serif;
-    font-size: 12px;
-}
 
 .svg-container {
 	display: inline-block;
@@ -197,17 +195,27 @@ left: 0;
 }
 .embiggen {
 	#vizcontainer {
-		max-width: 620px;
-		float: left;
+		// max-width: 620px;
+		// float: left;
 	}
 
 	#infobox {
 		// float: left;
-		left: 650px;
-		position: absolute;
+		// left: 650px;
+		// position: absolute;
 	}
 }
 
+.piped {
+  li:before {
+    content: "| ";
+  }
+  li:first-child:before {
+    content: "";
+  }
+}
+
 svg { max-height: 100%; }
+
 
 }

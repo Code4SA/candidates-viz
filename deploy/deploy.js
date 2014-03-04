@@ -5,13 +5,19 @@ Code4SA.template = (function(window,document,undefined) {
 <div id="overlay"></div> \
 <div class=" pull-left well animate" id="embiggen_container" style="top: 0px"> \
 <div class="btn btn-danger btn-sm" id="close"><span class="glyphicon glyphicon-remove"></span></div> \
-<div id="vizcontainer"> \
+<div id="vizcontainer" class="col-md-12"> \
 <div id="titlecontainer" class="svg-container"></div> \
+<div id="howto" class="text-center"> \
+	<p>The graph plots parties\' candidates according to median age and percentage of women. The number of candidates is indicated by circle size.</p>\
+	<p>Move your mouse over the relevant circle for more information about the party.</p> \
+	<p><strong>Check back on 22 April 2014 for an updated list with the 2014 Candidates</strong></p>\
+</div> \
 <div id="quadcontainer" ></div> \
+<p><small>Source: IEC - 2009 National and Regional Candidates List</small></p> \
 <br clear="both" /> \
 </div> \
-<div id="infobox"> \
-<div id="party_info"> \
+<div id="infobox" class="col-md-3"> \
+<div id="party_info" class="well"> \
 <h3 id="lbl_party"></h3> \
 <dl class="dl-horizontal"> \
 <dt>Total Candidates:</dt> <dd><span id="lbl_total"></span></dd> \
@@ -26,16 +32,10 @@ Code4SA.template = (function(window,document,undefined) {
 <span id="gender_pie"></span> \
 <span id="age_pie"></span> \
 <h4>Youngest Members</h4> \
-<div id="youngest_members"></div> \
+<div id="youngest_members"><ul /></div> \
 <h4>Oldest Members</h4> \
-<div id="oldest_members"></div> \
+<div id="oldest_members"><ul /></div> \
 </div> \
-<h3>Who are you voting for?</h3> \
-<p> \
-Compare the candidate lists for political parties in the 2009 general elections. What does a party\'s manifesto say about youth unemployment and how is that reflected in their demographic make-up. The graph to the left plots parties according to their median age as well as the percentage of women amongst their candidates. Larger parties (more candidates) are represented by large circles. Correspondingly, smaller parties are represented by small circles. \
-</p> \
-<p>Move your mouse over the relevant circle for more information about the party.</p> \
-<p><small>Source: IEC - 2009 National and Regional Candidates List</small></p> \
 </div> \
 </div> \
 </div>';
