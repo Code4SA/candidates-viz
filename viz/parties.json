@@ -1,1 +1,1877 @@
-../parser/parties.json
+[
+    {
+        "vold": 0, 
+        "old": 41, 
+        "males": 199, 
+        "median_age": 48, 
+        "youngest": [
+            [
+                "NGOAKO ABEL RANGATA", 
+                "LIMPOPO", 
+                27, 
+                "Male"
+            ], 
+            [
+                "KEAMOGETSWE BETH KUYPERS", 
+                "GAUTENG", 
+                28, 
+                "Female"
+            ], 
+            [
+                "ZANDILE FAVOURITE MAPHUMULO", 
+                "KWAZULU-NATAL", 
+                28, 
+                "Female"
+            ], 
+            [
+                "LUZELLE HENRIETTA ADAMS", 
+                "National", 
+                28, 
+                "Female"
+            ], 
+            [
+                "CHUN-CHIAO HUANG", 
+                "National", 
+                28, 
+                "Male"
+            ]
+        ], 
+        "middle": 237, 
+        "abbr": "COPE", 
+        "females": 150, 
+        "oldest": [
+            [
+                "NOMHLE MAHLAWE", 
+                "KWAZULU-NATAL", 
+                68, 
+                "Female"
+            ], 
+            [
+                "ISGAAK KAMAAR", 
+                "National", 
+                68, 
+                "Male"
+            ], 
+            [
+                "PETRUS JACOBUS JOHANNES PIENAAR", 
+                "LIMPOPO", 
+                69, 
+                "Male"
+            ], 
+            [
+                "ABDURGAMIET GABIER", 
+                "National", 
+                74, 
+                "Male"
+            ], 
+            [
+                "MAKHOSAZANA ABIGAIL ALICIA NJOBE", 
+                "EASTERN CAPE", 
+                79, 
+                "Female"
+            ]
+        ], 
+        "young": 71, 
+        "party": "CONGRESS OF THE PEOPLE"
+    }, 
+    {
+        "vold": 2, 
+        "old": 73, 
+        "males": 138, 
+        "median_age": 56, 
+        "youngest": [
+            [
+                "CORNELIA NIKKE STRYDOM", 
+                "National", 
+                20, 
+                "Female"
+            ], 
+            [
+                "ROELINE VENTER", 
+                "National", 
+                21, 
+                "Female"
+            ], 
+            [
+                "ALMARI STRYDOM", 
+                "FREE STATE", 
+                23, 
+                "Female"
+            ], 
+            [
+                "SUN\u00c4 L\u00d6TTER", 
+                "National", 
+                23, 
+                "Female"
+            ], 
+            [
+                "MARCUS CHRISTIAAN PAWSON", 
+                "National", 
+                23, 
+                "Male"
+            ]
+        ], 
+        "middle": 74, 
+        "abbr": "FF Plus", 
+        "females": 46, 
+        "oldest": [
+            [
+                "DANIEL JACOBUS BRINK", 
+                "National", 
+                77, 
+                "Male"
+            ], 
+            [
+                "GUILLAUME FRANCOIS NEL", 
+                "National", 
+                78, 
+                "Male"
+            ], 
+            [
+                "IGNATIUS JACOBUS FERREIRA", 
+                "National", 
+                79, 
+                "Male"
+            ], 
+            [
+                "SAREL FREDERICK BOTES", 
+                "National", 
+                80, 
+                "Male"
+            ], 
+            [
+                "PETRUS JOHANNES LODEWICUS 5007 GROBLER", 
+                "National", 
+                86, 
+                "Female"
+            ]
+        ], 
+        "young": 35, 
+        "party": "VRYHEIDSFRONT PLUS"
+    }, 
+    {
+        "vold": 0, 
+        "old": 29, 
+        "males": 168, 
+        "median_age": 46, 
+        "youngest": [
+            [
+                "CHANDRE MARK-LUCIA JOHANNES", 
+                "National", 
+                21, 
+                "Female"
+            ], 
+            [
+                "PRECIOUS ZAMANGWANE ZIKALI", 
+                "KWAZULU-NATAL", 
+                22, 
+                "Female"
+            ], 
+            [
+                "LITHA MASIVAKALE NCOKAZI", 
+                "EASTERN CAPE", 
+                25, 
+                "Male"
+            ], 
+            [
+                "URSULA JOSEPH", 
+                "National", 
+                25, 
+                "Female"
+            ], 
+            [
+                "PHINDILE ZWANE", 
+                "National", 
+                25, 
+                "Female"
+            ]
+        ], 
+        "middle": 171, 
+        "abbr": "ACDP", 
+        "females": 100, 
+        "oldest": [
+            [
+                "SARAH GEORGINA ESTERHUYSEN", 
+                "National", 
+                70, 
+                "Female"
+            ], 
+            [
+                "KHATHAZILE KATE MAHLABA", 
+                "National", 
+                71, 
+                "Female"
+            ], 
+            [
+                "GOVINDASAMY SUBRAMINIAN", 
+                "KWAZULU-NATAL", 
+                72, 
+                "Male"
+            ], 
+            [
+                "JOHANNES STEFANUS THERON ALBERTS", 
+                "WESTERN CAPE", 
+                72, 
+                "Male"
+            ], 
+            [
+                "RAKOTE DANIEL MANOKO", 
+                "National", 
+                77, 
+                "Male"
+            ]
+        ], 
+        "young": 68, 
+        "party": "AFRICAN CHRISTIAN DEMOCRATIC PARTY"
+    }, 
+    {
+        "vold": 0, 
+        "old": 17, 
+        "males": 106, 
+        "median_age": 45, 
+        "youngest": [
+            [
+                "NONTEMBISO PROMISE MKHABANGOBE", 
+                "KWAZULU-NATAL", 
+                25, 
+                "Female"
+            ], 
+            [
+                "OTSHEPENG ISAACS MOSEBO", 
+                "NORTH WEST", 
+                27, 
+                "Male"
+            ], 
+            [
+                "NQABAYOMZI LAWRENCE KWANKWA", 
+                "National", 
+                29, 
+                "Male"
+            ], 
+            [
+                "ADVOCATE NKQUBELA SIGANGA", 
+                "National", 
+                30, 
+                "Male"
+            ], 
+            [
+                "NOKUTHULA CHRISTINA NGUBO", 
+                "National", 
+                30, 
+                "Female"
+            ]
+        ], 
+        "middle": 90, 
+        "abbr": "UDM", 
+        "females": 40, 
+        "oldest": [
+            [
+                "MASIZA MAXWELL MHLATI", 
+                "National", 
+                66, 
+                "Male"
+            ], 
+            [
+                "PIET VAN ROOYEN", 
+                "NORTHERN CAPE", 
+                67, 
+                "Male"
+            ], 
+            [
+                "JACKSON BICI", 
+                "National", 
+                67, 
+                "Male"
+            ], 
+            [
+                "NTOPILE MARCEL KGANYAGO", 
+                "National", 
+                69, 
+                "Male"
+            ], 
+            [
+                "MARIA PETRONELLA BOTHA", 
+                "National", 
+                70, 
+                "Female"
+            ]
+        ], 
+        "young": 39, 
+        "party": "UNITED DEMOCRATIC MOVEMENT"
+    }, 
+    {
+        "vold": 0, 
+        "old": 3, 
+        "males": 16, 
+        "median_age": 39, 
+        "youngest": [
+            [
+                "NNDATENI ISHMAEL SINGO", 
+                "National", 
+                24, 
+                "Male"
+            ], 
+            [
+                "DOCTOR JAPTHA MOLAWA", 
+                "National", 
+                25, 
+                "Male"
+            ], 
+            [
+                "SETH MOGOTSI MOGOTSI", 
+                "National", 
+                27, 
+                "Male"
+            ], 
+            [
+                "MMALUKI LIZZY MATJILA", 
+                "National", 
+                28, 
+                "Female"
+            ], 
+            [
+                "BETTY OUMA MAHLOBO", 
+                "National", 
+                31, 
+                "Female"
+            ]
+        ], 
+        "middle": 15, 
+        "abbr": "MDP", 
+        "females": 14, 
+        "oldest": [
+            [
+                "NTSUDZULUSENI EDSON RAMUKANDA", 
+                "National", 
+                53, 
+                "Male"
+            ], 
+            [
+                "PHANGWENI SARAH MABUNDA", 
+                "GAUTENG", 
+                56, 
+                "Female"
+            ], 
+            [
+                "TOMI DANIEL MAIKEPA", 
+                "National", 
+                62, 
+                "Male"
+            ], 
+            [
+                "JACOBUS TAPEDI MASEKA", 
+                "National", 
+                66, 
+                "Male"
+            ], 
+            [
+                "MANTOPI PHILEMON MODIBA", 
+                "National", 
+                71, 
+                "Male"
+            ]
+        ], 
+        "young": 12, 
+        "party": "MOVEMENT DEMOCRATIC PARTY"
+    }, 
+    {
+        "vold": 0, 
+        "old": 3, 
+        "males": 40, 
+        "median_age": 40, 
+        "youngest": [
+            [
+                "CHARISSE NADINE LALA", 
+                "GAUTENG", 
+                21, 
+                "Female"
+            ], 
+            [
+                "NATASHA TERESA FREDERICKS", 
+                "EASTERN CAPE", 
+                22, 
+                "Female"
+            ], 
+            [
+                "ODWA MATOMELA", 
+                "EASTERN CAPE", 
+                23, 
+                "Male"
+            ], 
+            [
+                "ANNAH ABILITY SHILOMBE", 
+                "NORTH WEST", 
+                24, 
+                "Female"
+            ], 
+            [
+                "SETJHABA LEONARD MIYA", 
+                "National", 
+                24, 
+                "Male"
+            ]
+        ], 
+        "middle": 35, 
+        "abbr": "NDC", 
+        "females": 25, 
+        "oldest": [
+            [
+                "JEAN PETERS", 
+                "EASTERN CAPE", 
+                59, 
+                "Female"
+            ], 
+            [
+                "MZIKAYISE VINCENT NGEMA", 
+                "National", 
+                59, 
+                "Male"
+            ], 
+            [
+                "ABASAI MHLONGO", 
+                "National", 
+                60, 
+                "Male"
+            ], 
+            [
+                "MARGARET VIOLET CLARKE", 
+                "EASTERN CAPE", 
+                62, 
+                "Female"
+            ], 
+            [
+                "FARIEDA RAJAP", 
+                "EASTERN CAPE", 
+                65, 
+                "Female"
+            ]
+        ], 
+        "young": 27, 
+        "party": "NATIONAL DEMOCRATIC CONVENTION"
+    }, 
+    {
+        "vold": 2, 
+        "old": 72, 
+        "males": 203, 
+        "median_age": 51, 
+        "youngest": [
+            [
+                "MDUDUZI COMFORT MANANA", 
+                "MPUMALANGA", 
+                25, 
+                "Male"
+            ], 
+            [
+                "ZANELE PRECIOUS KHENA", 
+                "KWAZULU-NATAL", 
+                27, 
+                "Female"
+            ], 
+            [
+                "JUDITH TSHABALALA", 
+                "National", 
+                27, 
+                "Female"
+            ], 
+            [
+                "MATSHEPO SHEILLAH DUBE", 
+                "National", 
+                29, 
+                "Female"
+            ], 
+            [
+                "PHUMZA BRIGETTE TYHALISISU", 
+                "WESTERN CAPE", 
+                30, 
+                "Female"
+            ]
+        ], 
+        "middle": 274, 
+        "abbr": "ANC", 
+        "females": 190, 
+        "oldest": [
+            [
+                "NKOSINATHI BENSON FIHLA", 
+                "EASTERN CAPE", 
+                77, 
+                "Male"
+            ], 
+            [
+                "MAWALAL RAMGOBIN", 
+                "KWAZULU-NATAL", 
+                77, 
+                "Male"
+            ], 
+            [
+                "ALBERTINAH NOMATHULI LUTHULI", 
+                "National", 
+                77, 
+                "Female"
+            ], 
+            [
+                "BENJAMIN TUROK", 
+                "National", 
+                82, 
+                "Male"
+            ], 
+            [
+                "ANDREW MLANGENI", 
+                "GAUTENG", 
+                84, 
+                "Male"
+            ]
+        ], 
+        "young": 45, 
+        "party": "AFRICAN NATIONAL CONGRESS"
+    }, 
+    {
+        "vold": 1, 
+        "old": 27, 
+        "males": 113, 
+        "median_age": 43, 
+        "youngest": [
+            [
+                "REGINALD WILLIAMS", 
+                "National", 
+                20, 
+                "Male"
+            ], 
+            [
+                "ADRI PRETORIUS", 
+                "National", 
+                21, 
+                "Female"
+            ], 
+            [
+                "ELIZE JACOBS", 
+                "National", 
+                22, 
+                "Female"
+            ], 
+            [
+                "FRANCO INGBERT EMMANUEL DANIELS", 
+                "National", 
+                22, 
+                "Male"
+            ], 
+            [
+                "OLWEN MARI SOLOMON", 
+                "National", 
+                23, 
+                "Female"
+            ]
+        ], 
+        "middle": 79, 
+        "abbr": "CDA", 
+        "females": 61, 
+        "oldest": [
+            [
+                "SALOMON CORNELIUS CLOETE", 
+                "National", 
+                76, 
+                "Male"
+            ], 
+            [
+                "SYDNEY MANZOLWANDLE GELANA", 
+                "National", 
+                77, 
+                "Male"
+            ], 
+            [
+                "EDUARD STANLEY THERON", 
+                "National", 
+                78, 
+                "Male"
+            ], 
+            [
+                "ISAAC KAARS", 
+                "National", 
+                79, 
+                "Male"
+            ], 
+            [
+                "GERT JOHANNES VAN NIEKERK", 
+                "National", 
+                80, 
+                "Male"
+            ]
+        ], 
+        "young": 67, 
+        "party": "CHRISTIAN DEMOCRATIC ALLIANCE"
+    }, 
+    {
+        "vold": 3, 
+        "old": 22, 
+        "males": 86, 
+        "median_age": 44, 
+        "youngest": [
+            [
+                "SABELO CLARENCE SIGUDU", 
+                "FREE STATE", 
+                19, 
+                "Male"
+            ], 
+            [
+                "VUYANE ZAMANI", 
+                "EASTERN CAPE", 
+                25, 
+                "Male"
+            ], 
+            [
+                "SHARON MOKOENA", 
+                "LIMPOPO", 
+                25, 
+                "Female"
+            ], 
+            [
+                "NGWENDE JONAS SIMELANE", 
+                "FREE STATE", 
+                26, 
+                "Male"
+            ], 
+            [
+                "MICHAEL ESSEU MKHONTO", 
+                "LIMPOPO", 
+                26, 
+                "Male"
+            ]
+        ], 
+        "middle": 56, 
+        "abbr": "IFP", 
+        "females": 39, 
+        "oldest": [
+            [
+                "MSHIYENI FRED MBELE", 
+                "National", 
+                75, 
+                "Male"
+            ], 
+            [
+                "MABALANA WILLIAS SIBUYANA", 
+                "National", 
+                76, 
+                "Male"
+            ], 
+            [
+                "MANGOSUTHU GATSHA BUTHELEZI", 
+                "National", 
+                81, 
+                "Male"
+            ], 
+            [
+                "INKA MARS", 
+                "National", 
+                81, 
+                "Female"
+            ], 
+            [
+                "MAXWELL SANDLESIHLE MOSES 5602 SIBIYA", 
+                "MPUMALANGA", 
+                84, 
+                "Female"
+            ]
+        ], 
+        "young": 44, 
+        "party": "INKATHA FREEDOM PARTY"
+    }, 
+    {
+        "vold": 0, 
+        "old": 0, 
+        "males": 9, 
+        "median_age": 45, 
+        "youngest": [
+            [
+                "NICHOLAS SIGCINO CHONCO", 
+                "National", 
+                33, 
+                "Male"
+            ], 
+            [
+                "GLADSTONE BONOKUHLE BUTHELEZI", 
+                "National", 
+                41, 
+                "Male"
+            ], 
+            [
+                "SIBONELO STANLEY ZIKHALI", 
+                "KWAZULU-NATAL", 
+                42, 
+                "Male"
+            ], 
+            [
+                "SIBUSISO PETROS NZUZA", 
+                "National", 
+                43, 
+                "Male"
+            ], 
+            [
+                "KINDROS SILAULE", 
+                "National", 
+                45, 
+                "Male"
+            ]
+        ], 
+        "middle": 10, 
+        "abbr": "SADC", 
+        "females": 2, 
+        "oldest": [
+            [
+                "ZODWA VETJIE SEBOLA", 
+                "National", 
+                46, 
+                "Female"
+            ], 
+            [
+                "ELLIOT MANDLAKHE MKHIZE", 
+                "National", 
+                47, 
+                "Male"
+            ], 
+            [
+                "THANDI ROSEMARY NDLOVU", 
+                "KWAZULU-NATAL", 
+                49, 
+                "Female"
+            ], 
+            [
+                "ZIBA BONGINKOSI JIYANE", 
+                "National", 
+                51, 
+                "Male"
+            ], 
+            [
+                "SAMUEL HUMPHRY KENNEDY", 
+                "National", 
+                51, 
+                "Male"
+            ]
+        ], 
+        "young": 1, 
+        "party": "SOUTH AFRICAN DEMOCRATIC CONGRESS"
+    }, 
+    {
+        "vold": 2, 
+        "old": 10, 
+        "males": 32, 
+        "median_age": 42, 
+        "youngest": [
+            [
+                "S'PHESIHLE ZWANE", 
+                "KWAZULU-NATAL", 
+                20, 
+                "Male"
+            ], 
+            [
+                "CELIMPILO PEACEFUL NYEMBE", 
+                "KWAZULU-NATAL", 
+                21, 
+                "Female"
+            ], 
+            [
+                "NKOSINATHI MBUYISENI NDLANGISA", 
+                "KWAZULU-NATAL", 
+                27, 
+                "Male"
+            ], 
+            [
+                "SIPHO JOHN VILAKAZI", 
+                "KWAZULU-NATAL", 
+                30, 
+                "Male"
+            ], 
+            [
+                "MDUMISENI MBONGENI HESHULA", 
+                "EASTERN CAPE", 
+                32, 
+                "Male"
+            ]
+        ], 
+        "middle": 14, 
+        "abbr": "PAM", 
+        "females": 10, 
+        "oldest": [
+            [
+                "MATLAKANA PHILEMON TEFU", 
+                "National", 
+                69, 
+                "Male"
+            ], 
+            [
+                "LUMKILE JACK", 
+                "WESTERN CAPE", 
+                70, 
+                "Male"
+            ], 
+            [
+                "BALEKILE WELCOME SIRAYI", 
+                "WESTERN CAPE", 
+                78, 
+                "Male"
+            ], 
+            [
+                "JEFREY MKRWEQANA", 
+                "WESTERN CAPE", 
+                80, 
+                "Male"
+            ], 
+            [
+                "MAWETU EDWARD NKINTI", 
+                "WESTERN CAPE", 
+                80, 
+                "Male"
+            ]
+        ], 
+        "young": 16, 
+        "party": "PAN AFRICANIST MOVEMENT"
+    }, 
+    {
+        "vold": 0, 
+        "old": 13, 
+        "males": 130, 
+        "median_age": 42, 
+        "youngest": [
+            [
+                "THEMBISILE JOB", 
+                "National", 
+                20, 
+                "Male"
+            ], 
+            [
+                "SANELE BRAEL XABA", 
+                "KWAZULU-NATAL", 
+                21, 
+                "Male"
+            ], 
+            [
+                "DIMAKATSO EMILY MOKOENA", 
+                "FREE STATE", 
+                22, 
+                "Female"
+            ], 
+            [
+                "JACOB KOBETE MOKERETLA", 
+                "National", 
+                22, 
+                "Male"
+            ], 
+            [
+                "MOHLOPHEHI LUCAS NTAKANE", 
+                "National", 
+                23, 
+                "Male"
+            ]
+        ], 
+        "middle": 120, 
+        "abbr": "APC", 
+        "females": 74, 
+        "oldest": [
+            [
+                "MOJALEFA DYKE SEKOSANA", 
+                "NORTH WEST", 
+                65, 
+                "Male"
+            ], 
+            [
+                "BOEBOE SIMON KOKOZELA", 
+                "FREE STATE", 
+                66, 
+                "Male"
+            ], 
+            [
+                "MEREOTLHE JOSEPH DITSHOMI", 
+                "NORTH WEST", 
+                66, 
+                "Male"
+            ], 
+            [
+                "DINGAAN JAIRUS MNISI", 
+                "National", 
+                72, 
+                "Male"
+            ], 
+            [
+                "BUTINYANA STOFFEL SELLO", 
+                "National", 
+                74, 
+                "Male"
+            ]
+        ], 
+        "young": 71, 
+        "party": "AFRICAN PEOPLE'S CONVENTION"
+    }, 
+    {
+        "vold": 0, 
+        "old": 2, 
+        "males": 30, 
+        "median_age": 37, 
+        "youngest": [
+            [
+                "LOUIZA SEIPATI MATHABALE", 
+                "National", 
+                19, 
+                "Female"
+            ], 
+            [
+                "BUBELE NOWA", 
+                "National", 
+                23, 
+                "Male"
+            ], 
+            [
+                "TINYIKO LOVEY MAHUNTSI", 
+                "LIMPOPO", 
+                24, 
+                "Female"
+            ], 
+            [
+                "GLADYS MAKWENA MADUANA", 
+                "LIMPOPO", 
+                25, 
+                "Female"
+            ], 
+            [
+                "TRYPHINA BUSISIWE PHAKATHI", 
+                "National", 
+                25, 
+                "Female"
+            ]
+        ], 
+        "middle": 23, 
+        "abbr": "UIF", 
+        "females": 25, 
+        "oldest": [
+            [
+                "RAMADIMETJA PAULINA SEBORA", 
+                "LIMPOPO", 
+                57, 
+                "Female"
+            ], 
+            [
+                "JEREMIAH SELLO BOIKHUTSO", 
+                "National", 
+                58, 
+                "Male"
+            ], 
+            [
+                "LEONARD HAROLD FIELDING", 
+                "National", 
+                58, 
+                "Male"
+            ], 
+            [
+                "EDMUND MANDLA MAGAQA", 
+                "National", 
+                60, 
+                "Male"
+            ], 
+            [
+                "NEVILLE DESMOND HENDRICKS", 
+                "National", 
+                69, 
+                "Male"
+            ]
+        ], 
+        "young": 30, 
+        "party": "UNITED INDEPENDENT FRONT"
+    }, 
+    {
+        "vold": 0, 
+        "old": 6, 
+        "males": 17, 
+        "median_age": 48, 
+        "youngest": [
+            [
+                "VANESHREE GOVENDER", 
+                "National", 
+                28, 
+                "Female"
+            ], 
+            [
+                "ZANELE LADYFAIR GUMEDE", 
+                "National", 
+                29, 
+                "Female"
+            ], 
+            [
+                "PATRICIA KHOMO", 
+                "National", 
+                33, 
+                "Female"
+            ], 
+            [
+                "ISMAIL CASSIMJEE", 
+                "National", 
+                38, 
+                "Male"
+            ], 
+            [
+                "VIMMI RAMDAAS BACHU", 
+                "National", 
+                40, 
+                "Female"
+            ]
+        ], 
+        "middle": 20, 
+        "abbr": "MF", 
+        "females": 13, 
+        "oldest": [
+            [
+                "BANPARKASH GIRDHARI", 
+                "National", 
+                64, 
+                "Male"
+            ], 
+            [
+                "AMICHAND RAJBANSI", 
+                "National", 
+                67, 
+                "Male"
+            ], 
+            [
+                "NUNKUMAR RAJARAM", 
+                "National", 
+                73, 
+                "Male"
+            ], 
+            [
+                "THULKANNA PALAN", 
+                "National", 
+                76, 
+                "Male"
+            ], 
+            [
+                "SUNKLAVATHY RAJBALLY", 
+                "National", 
+                77, 
+                "Female"
+            ]
+        ], 
+        "young": 4, 
+        "party": "MINORITY FRONT"
+    }, 
+    {
+        "vold": 0, 
+        "old": 12, 
+        "males": 108, 
+        "median_age": 44, 
+        "youngest": [
+            [
+                "MABITSELA HEZEKIEL MPHASHA", 
+                "LIMPOPO", 
+                24, 
+                "Male"
+            ], 
+            [
+                "NONHLANHLA TWALA", 
+                "GAUTENG", 
+                25, 
+                "Female"
+            ], 
+            [
+                "MANDISA SEALIRA", 
+                "National", 
+                25, 
+                "Female"
+            ], 
+            [
+                "PRIMROSE JANUARY", 
+                "National", 
+                25, 
+                "Female"
+            ], 
+            [
+                "OMPHEMETSE KEVIN BAREKI", 
+                "NORTH WEST", 
+                27, 
+                "Male"
+            ]
+        ], 
+        "middle": 84, 
+        "abbr": "PAC", 
+        "females": 29, 
+        "oldest": [
+            [
+                "PATEKILE ALBERT KALIPA", 
+                "EASTERN CAPE", 
+                66, 
+                "Male"
+            ], 
+            [
+                "MOEKETSI JOHN MAHAPA", 
+                "KWAZULU-NATAL", 
+                69, 
+                "Male"
+            ], 
+            [
+                "WATERS TOBOTI", 
+                "National", 
+                70, 
+                "Male"
+            ], 
+            [
+                "NGWAKO GILBERT MATIMOLANE", 
+                "LIMPOPO", 
+                71, 
+                "Male"
+            ], 
+            [
+                "CLIPPARD TAMSANQA KOMSANA", 
+                "National", 
+                73, 
+                "Male"
+            ]
+        ], 
+        "young": 41, 
+        "party": "PAN AFRICANIST CONGRESS OF AZANIA"
+    }, 
+    {
+        "vold": 0, 
+        "old": 5, 
+        "males": 20, 
+        "median_age": 49, 
+        "youngest": [
+            [
+                "MASHIR VINESH CHUTURGOON", 
+                "National", 
+                23, 
+                "Male"
+            ], 
+            [
+                "DIANNE GANESS", 
+                "National", 
+                31, 
+                "Female"
+            ], 
+            [
+                "RUBASHNIE PILLAY", 
+                "National", 
+                32, 
+                "Female"
+            ], 
+            [
+                "SUNNYBOY MABASA", 
+                "National", 
+                34, 
+                "Male"
+            ], 
+            [
+                "MOTLALEPULE FRANCINAH SHOMANG", 
+                "National", 
+                35, 
+                "Female"
+            ]
+        ], 
+        "middle": 18, 
+        "abbr": "GKSA", 
+        "females": 11, 
+        "oldest": [
+            [
+                "MAHLOPHO MARIA BOTSI", 
+                "National", 
+                62, 
+                "Female"
+            ], 
+            [
+                "MBUTI ISAAC GALELA", 
+                "National", 
+                64, 
+                "Male"
+            ], 
+            [
+                "LAZARUS HARRY MOODLEY", 
+                "National", 
+                72, 
+                "Male"
+            ], 
+            [
+                "SIPHO SIMON NONTSELE", 
+                "National", 
+                73, 
+                "Male"
+            ], 
+            [
+                "ISAAC JABULANI BUTHELEZI", 
+                "National", 
+                75, 
+                "Male"
+            ]
+        ], 
+        "young": 8, 
+        "party": "GREAT KONGRESS OF SOUTH AFRICA"
+    }, 
+    {
+        "vold": 3, 
+        "old": 61, 
+        "males": 134, 
+        "median_age": 48, 
+        "youngest": [
+            [
+                "KABELO JEFFREY DIKGANG", 
+                "GAUTENG", 
+                19, 
+                "Male"
+            ], 
+            [
+                "ROBERT KARABO SETLALEKGOSI", 
+                "National", 
+                20, 
+                "Male"
+            ], 
+            [
+                "EUGENE BOIPELO MONNAPULA", 
+                "National", 
+                20, 
+                "Male"
+            ], 
+            [
+                "NEO GLENDA THWALA", 
+                "WESTERN CAPE", 
+                21, 
+                "Female"
+            ], 
+            [
+                "TAKALANI VICTOR MUGODO", 
+                "LIMPOPO", 
+                23, 
+                "Male"
+            ]
+        ], 
+        "middle": 129, 
+        "abbr": "UCDP", 
+        "females": 147, 
+        "oldest": [
+            [
+                "MOLIHI JANTJIE MOSHODI", 
+                "National", 
+                77, 
+                "Male"
+            ], 
+            [
+                "JACOB MORAKE LETSHWENE", 
+                "National", 
+                77, 
+                "Male"
+            ], 
+            [
+                "FANENYANA FRANS MOSHWEU", 
+                "National", 
+                80, 
+                "Male"
+            ], 
+            [
+                "REUBEN OLEFILE THUTLWA", 
+                "NORTH WEST", 
+                81, 
+                "Male"
+            ], 
+            [
+                "LUCAS MANYANE MANGOPE", 
+                "National", 
+                86, 
+                "Male"
+            ]
+        ], 
+        "young": 88, 
+        "party": "UNITED CHRISTIAN DEMOCRATIC PARTY"
+    }, 
+    {
+        "vold": 0, 
+        "old": 7, 
+        "males": 67, 
+        "median_age": 38, 
+        "youngest": [
+            [
+                "PHINA MASHOTSA", 
+                "LIMPOPO", 
+                20, 
+                "Female"
+            ], 
+            [
+                "SETLABO JUDAS MAKGOBA", 
+                "LIMPOPO", 
+                23, 
+                "Male"
+            ], 
+            [
+                "MASILO PATRICK SETJIE", 
+                "LIMPOPO", 
+                23, 
+                "Male"
+            ], 
+            [
+                "BERNARD RASIMPHI", 
+                "LIMPOPO", 
+                23, 
+                "Male"
+            ], 
+            [
+                "COLLEN BALOYI", 
+                "LIMPOPO", 
+                23, 
+                "Male"
+            ]
+        ], 
+        "middle": 61, 
+        "abbr": "NVP", 
+        "females": 71, 
+        "oldest": [
+            [
+                "NOMTWABELA CELIA NCUBUKA", 
+                "National", 
+                61, 
+                "Female"
+            ], 
+            [
+                "MALESELA HARRY MARAKALLA", 
+                "LIMPOPO", 
+                66, 
+                "Male"
+            ], 
+            [
+                "PHU SOLOMON NGWEPE", 
+                "KWAZULU-NATAL", 
+                67, 
+                "Male"
+            ], 
+            [
+                "MATSOBANE HENDRICK LEHUTSO", 
+                "NORTHERN CAPE", 
+                68, 
+                "Male"
+            ], 
+            [
+                "RAMEASELA MARY KEKANA", 
+                "WESTERN CAPE", 
+                69, 
+                "Female"
+            ]
+        ], 
+        "young": 70, 
+        "party": "NEW VISION PARTY"
+    }, 
+    {
+        "vold": 0, 
+        "old": 6, 
+        "males": 45, 
+        "median_age": 39, 
+        "youngest": [
+            [
+                "BETTY RANDIMA", 
+                "National", 
+                19, 
+                "Female"
+            ], 
+            [
+                "TUMELO MOTHEO KEKANA", 
+                "GAUTENG", 
+                23, 
+                "Male"
+            ], 
+            [
+                "MUDZUNGA MULALO MAFADZA", 
+                "National", 
+                24, 
+                "Female"
+            ], 
+            [
+                "AVHASHONI JEFFREY MAKHWATHANE", 
+                "National", 
+                24, 
+                "Male"
+            ], 
+            [
+                "NOMPUMELELO POTWANA", 
+                "National", 
+                25, 
+                "Female"
+            ]
+        ], 
+        "middle": 37, 
+        "abbr": "A Party", 
+        "females": 39, 
+        "oldest": [
+            [
+                "MANONI MONYAI", 
+                "National", 
+                65, 
+                "Female"
+            ], 
+            [
+                "ROSELINE NKOSI", 
+                "National", 
+                65, 
+                "Female"
+            ], 
+            [
+                "MARIA LOUISA CARTER", 
+                "National", 
+                67, 
+                "Female"
+            ], 
+            [
+                "MARY MULALO DZHALAGOME", 
+                "MPUMALANGA", 
+                69, 
+                "Female"
+            ], 
+            [
+                "BETTY SELLO", 
+                "National", 
+                76, 
+                "Female"
+            ]
+        ], 
+        "young": 41, 
+        "party": "A PARTY"
+    }, 
+    {
+        "vold": 0, 
+        "old": 0, 
+        "males": 1, 
+        "median_age": 40, 
+        "youngest": [
+            [
+                "TSHIFHIWA CONSTANCE NANGAMMBI", 
+                "National", 
+                30, 
+                "Female"
+            ], 
+            [
+                "RUDZANI EMELY MADZAGADZAGA", 
+                "National", 
+                32, 
+                "Female"
+            ], 
+            [
+                "JEANETTE THABISENG RADEBE", 
+                "National", 
+                39, 
+                "Female"
+            ], 
+            [
+                "SARAH EDITH RUSSELL COLLINS", 
+                "National", 
+                40, 
+                "Female"
+            ], 
+            [
+                "EDZISANI REGUEL MULAUDZI", 
+                "National", 
+                43, 
+                "Male"
+            ]
+        ], 
+        "middle": 5, 
+        "abbr": "Women Forward", 
+        "females": 6, 
+        "oldest": [
+            [
+                "JEANETTE THABISENG RADEBE", 
+                "National", 
+                39, 
+                "Female"
+            ], 
+            [
+                "SARAH EDITH RUSSELL COLLINS", 
+                "National", 
+                40, 
+                "Female"
+            ], 
+            [
+                "EDZISANI REGUEL MULAUDZI", 
+                "National", 
+                43, 
+                "Male"
+            ], 
+            [
+                "SIBONGILE ISABEL SHEZI", 
+                "National", 
+                46, 
+                "Female"
+            ], 
+            [
+                "LINDIWE NANA NGOBESE", 
+                "National", 
+                48, 
+                "Female"
+            ]
+        ], 
+        "young": 2, 
+        "party": "WOMEN FORWARD"
+    }, 
+    {
+        "vold": 1, 
+        "old": 93, 
+        "males": 261, 
+        "median_age": 51, 
+        "youngest": [
+            [
+                "CHRISTOPHER MARK INGLE", 
+                "KWAZULU-NATAL", 
+                19, 
+                "Male"
+            ], 
+            [
+                "KAMEEL PREMHID", 
+                "KWAZULU-NATAL", 
+                20, 
+                "Male"
+            ], 
+            [
+                "AYANDA SILBOWER MBOMBO", 
+                "KWAZULU-NATAL", 
+                21, 
+                "Male"
+            ], 
+            [
+                "THANDI PATRICIA LUKHULENI", 
+                "LIMPOPO", 
+                21, 
+                "Female"
+            ], 
+            [
+                "NATALIE MOODLEY", 
+                "KWAZULU-NATAL", 
+                22, 
+                "Female"
+            ]
+        ], 
+        "middle": 216, 
+        "abbr": "DA", 
+        "females": 138, 
+        "oldest": [
+            [
+                "KEITH OLIVIER", 
+                "KWAZULU-NATAL", 
+                78, 
+                "Male"
+            ], 
+            [
+                "TERRENCE MCCOMB HERBST", 
+                "EASTERN CAPE", 
+                79, 
+                "Male"
+            ], 
+            [
+                "SAREL HENDRIK JACOBUS NAUDE", 
+                "GAUTENG", 
+                79, 
+                "Male"
+            ], 
+            [
+                "EUGENE RETIEF", 
+                "NORTH WEST", 
+                79, 
+                "Male"
+            ], 
+            [
+                "FLORENCE FRANCES ABRAMSON", 
+                "KWAZULU-NATAL", 
+                84, 
+                "Female"
+            ]
+        ], 
+        "young": 89, 
+        "party": "DEMOCRATIC ALLIANCE/DEMOKRATIESE ALLIANSIE"
+    }, 
+    {
+        "vold": 2, 
+        "old": 16, 
+        "males": 131, 
+        "median_age": 44, 
+        "youngest": [
+            [
+                "THOBEKA FRANCES NDINGANE", 
+                "EASTERN CAPE", 
+                22, 
+                "Female"
+            ], 
+            [
+                "GIFT EMMANUEL LAMOLA", 
+                "National", 
+                24, 
+                "Male"
+            ], 
+            [
+                "PITSI MATHEWS MALOBA", 
+                "National", 
+                24, 
+                "Male"
+            ], 
+            [
+                "PATRICK VUKILE KOM", 
+                "EASTERN CAPE", 
+                25, 
+                "Male"
+            ], 
+            [
+                "PORTIA NIKIWE SOVARA", 
+                "National", 
+                25, 
+                "Female"
+            ]
+        ], 
+        "middle": 107, 
+        "abbr": "AZAPO", 
+        "females": 46, 
+        "oldest": [
+            [
+                "BESENIA MARSHALL KUMALO", 
+                "National", 
+                73, 
+                "Male"
+            ], 
+            [
+                "MBUDI JOSEPH SIMELANE", 
+                "National", 
+                73, 
+                "Male"
+            ], 
+            [
+                "MOLEFE PHETO", 
+                "National", 
+                74, 
+                "Male"
+            ], 
+            [
+                "MAPHEFO THULAMSINDO NORAH 6303 RAPOTU", 
+                "National", 
+                82, 
+                "Female"
+            ], 
+            [
+                "EMMANUEL BHEKIZITHA SINOTHI 67 NDLOVU", 
+                "National", 
+                105, 
+                "Male"
+            ]
+        ], 
+        "young": 52, 
+        "party": "AZANIAN PEOPLE'S ORGANISATION"
+    }, 
+    {
+        "vold": 1, 
+        "old": 21, 
+        "males": 177, 
+        "median_age": 44, 
+        "youngest": [
+            [
+                "NTSUDZULUSENI MAPHOLI", 
+                "LIMPOPO", 
+                19, 
+                "Female"
+            ], 
+            [
+                "VHUTSHILO NETSHIHENI", 
+                "National", 
+                19, 
+                "Female"
+            ], 
+            [
+                "ABBEYGACIA BONGANI MKHALIPHI", 
+                "FREE STATE", 
+                21, 
+                "Male"
+            ], 
+            [
+                "CHARLDENE KOEN", 
+                "National", 
+                21, 
+                "Female"
+            ], 
+            [
+                "MBUTI JOSEPH MBAMBO", 
+                "National", 
+                22, 
+                "Male"
+            ]
+        ], 
+        "middle": 196, 
+        "abbr": "ID", 
+        "females": 130, 
+        "oldest": [
+            [
+                "GAWA SAMUELS", 
+                "National", 
+                68, 
+                "Female"
+            ], 
+            [
+                "NARANTUK JAMUNA JUMUNA", 
+                "KWAZULU-NATAL", 
+                70, 
+                "Male"
+            ], 
+            [
+                "NON MCCARTHY", 
+                "National", 
+                71, 
+                "Female"
+            ], 
+            [
+                "JOSHUA GEORGE MASANGO", 
+                "GAUTENG", 
+                72, 
+                "Male"
+            ], 
+            [
+                "ARISTIDES ANDREW EMMANUEL 6205 SEIRLIS", 
+                "National", 
+                97, 
+                "Female"
+            ]
+        ], 
+        "young": 89, 
+        "party": "INDEPENDENT DEMOCRATS"
+    }, 
+    {
+        "vold": 0, 
+        "old": 6, 
+        "males": 13, 
+        "median_age": 56, 
+        "youngest": [
+            [
+                "MIKATEKO QUENTIN MANTHOSI", 
+                "KWAZULU-NATAL", 
+                26, 
+                "Male"
+            ], 
+            [
+                "MBONGISENI CHRISTIAN KHUMALO", 
+                "KWAZULU-NATAL", 
+                37, 
+                "Male"
+            ], 
+            [
+                "FIONA KHAN", 
+                "National", 
+                45, 
+                "Female"
+            ], 
+            [
+                "SHAUNEEZ AJAT", 
+                "GAUTENG", 
+                48, 
+                "Female"
+            ], 
+            [
+                "ABDUL KARRIEM BEDFORD", 
+                "National", 
+                49, 
+                "Male"
+            ]
+        ], 
+        "middle": 9, 
+        "abbr": "Al Jama-ah", 
+        "females": 4, 
+        "oldest": [
+            [
+                "MOGAMAD GANIEF EBRAHIM HENDRICKS", 
+                "National", 
+                60, 
+                "Male"
+            ], 
+            [
+                "ABDUL GAMIET FLACKS", 
+                "National", 
+                60, 
+                "Male"
+            ], 
+            [
+                "BIENIEYAMIEN ALEXANDER", 
+                "National", 
+                61, 
+                "Male"
+            ], 
+            [
+                "SULAIMAN ADAMS", 
+                "National", 
+                62, 
+                "Male"
+            ], 
+            [
+                "MOGAMAT BEDFORD", 
+                "National", 
+                76, 
+                "Male"
+            ]
+        ], 
+        "young": 2, 
+        "party": "AL JAMA-AH"
+    }, 
+    {
+        "vold": 0, 
+        "old": 1, 
+        "males": 10, 
+        "median_age": 43, 
+        "youngest": [
+            [
+                "ANDILE BETHWELL TSHONA", 
+                "EASTERN CAPE", 
+                27, 
+                "Male"
+            ], 
+            [
+                "TRINITY NOMPUMELELO NGUBANE", 
+                "MPUMALANGA", 
+                28, 
+                "Female"
+            ], 
+            [
+                "WITNESS MOLVEN MABUNDA", 
+                "MPUMALANGA", 
+                29, 
+                "Male"
+            ], 
+            [
+                "LERATO ROSLEA DINEKA", 
+                "FREE STATE", 
+                33, 
+                "Female"
+            ], 
+            [
+                "KETETJE SAMUEL MAREDI", 
+                "NORTH WEST", 
+                35, 
+                "Male"
+            ]
+        ], 
+        "middle": 12, 
+        "abbr": "AFD", 
+        "females": 8, 
+        "oldest": [
+            [
+                "MOILA NELSON PAPALA", 
+                "GAUTENG", 
+                49, 
+                "Male"
+            ], 
+            [
+                "MICHAEL MAKABELA SONO", 
+                "LIMPOPO", 
+                49, 
+                "Male"
+            ], 
+            [
+                "SAMBULA DANIEL BALOYI", 
+                "National", 
+                51, 
+                "Male"
+            ], 
+            [
+                "DEBORAH NOSISI MFIKI", 
+                "WESTERN CAPE", 
+                56, 
+                "Female"
+            ], 
+            [
+                "THEMBA JOSEPH SONO", 
+                "National", 
+                67, 
+                "Male"
+            ]
+        ], 
+        "young": 5, 
+        "party": "ALLIANCE OF FREE DEMOCRATS"
+    }
+]

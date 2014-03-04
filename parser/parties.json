@@ -450,9 +450,9 @@
         "party": "NATIONAL DEMOCRATIC CONVENTION"
     }, 
     {
-        "vold": 3, 
-        "old": 71, 
-        "males": 202, 
+        "vold": 2, 
+        "old": 72, 
+        "males": 203, 
         "median_age": 51, 
         "youngest": [
             [
@@ -488,8 +488,14 @@
         ], 
         "middle": 274, 
         "abbr": "ANC", 
-        "females": 191, 
+        "females": 190, 
         "oldest": [
+            [
+                "NKOSINATHI BENSON FIHLA", 
+                "EASTERN CAPE", 
+                77, 
+                "Male"
+            ], 
             [
                 "MAWALAL RAMGOBIN", 
                 "KWAZULU-NATAL", 
@@ -513,12 +519,6 @@
                 "GAUTENG", 
                 84, 
                 "Male"
-            ], 
-            [
-                "LINDUMUSA BEKIZITHA GABRIEL 35 NDABANDABA", 
-                "KWAZULU-NATAL", 
-                105, 
-                "Female"
             ]
         ], 
         "young": 45, 
