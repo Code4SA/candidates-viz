@@ -5263,6 +5263,7 @@ button.code4sa-embed .close {
   stroke: steelblue;
   fill: none;
   opacity: 0.5;
+  display: none;
 }
 .code4sa-embed .axis {
   stroke-width: 3px;
@@ -5270,14 +5271,15 @@ button.code4sa-embed .close {
   fill: none;
 }
 .code4sa-embed .middle-axis {
-  opacity: 0.61728396;
+  opacity: 1;
   fill: #000000;
   stroke: #000000;
-  stroke-width: 1px;
+  stroke-width: 2px;
   stroke-linecap: round;
   stroke-miterlimit: 4;
   stroke-dasharray: 2.00000001,6.00000003;
   stroke-dashoffset: 0;
+  stroke-color: #444;
 }
 .code4sa-embed g.item circle {
   opacity: 0.7;
@@ -5323,7 +5325,10 @@ button.code4sa-embed .close {
   opacity: 1;
 }
 .code4sa-embed #embiggen_container.embiggen #quadcontainer {
-  width: 620px;
+  max-width: 820px;
+  background-color: #FFF;
+  border: 1px #444 solid;
+  padding: 20px;
 }
 .code4sa-embed .animate {
   transition: width 1s, height 1s, transform 1s, position 1s, margin 1s;

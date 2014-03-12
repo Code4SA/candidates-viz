@@ -22,7 +22,7 @@ Code4SA.app = (function(window,document,undefined) {
         max_radius = 30;
 
     var min_age = 35,
-        max_age = 57,
+        max_age = 58,
         // min_women = 10,
         // max_women = 90,
         middle_age = (min_age + max_age) / 2;
