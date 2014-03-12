@@ -1,11 +1,12 @@
 var Code4SA = {}; //Namespace
 
 String.prototype.toProperCase = function () {
-    return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    return this.replace(/\w\S*/g, function(txt) { if (txt != "OF" && txt != "THE") { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase() } else { return txt.toLowerCase() } });
 };
 
 Code4SA.app = (function(window,document,undefined) {
     var self = this;
+    var appTitle = "Age and gender balance in the 2009 general election";
     
     // Options
     var pie_colors = ["#ca0020", "#92c5de", "#f4a582", "#0571b0"];
@@ -145,7 +146,7 @@ Code4SA.app = (function(window,document,undefined) {
             .attr("dy", "25px")
             .attr("textLength", width)
             .style("font-size", "25px")
-            .text("Age and gender balance in the 2009 General Election");
+            .text(appTitle);
 
         var svg = d3.select("#quadcontainer").append("svg")
             .classed("svg-content", true)
@@ -173,7 +174,7 @@ Code4SA.app = (function(window,document,undefined) {
 
         
 
-        d3.json("../viz/parties.json", function(error, json) {
+        d3.json("http://candidates.code4sa.org/parser/parties.json", function(error, json) {
             if (error) {
                 return console.warn(error);
             }
