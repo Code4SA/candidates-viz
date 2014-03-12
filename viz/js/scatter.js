@@ -12,8 +12,8 @@ Code4SA.app = (function(window,document,undefined) {
     // var pie_colors = ["#ca0020", "#92c5de", "#f4a582", "#0571b0"];
     // var pie_colors = ["#ff6c00", "#ffaa00", "#f30021", "#009e8e"];
     
-    var width = 640,
-        height = 450,
+    var width = 820,
+        height = 486,
         gridSpacing = 40;
 
     // var aspect = width / height;
@@ -139,7 +139,7 @@ Code4SA.app = (function(window,document,undefined) {
             .attr("viewBox", "0 0 " + width + " 40")
             // .attr("height", 80)
             .classed("svg-content", true)
-            .attr("preserveAspectRatio", "xMidYMid")
+            .attr("preserveAspectRatio", "xMidYMid slice")
             .attr("id", "title");
 
         titleSvg.append("text")
@@ -153,9 +153,7 @@ Code4SA.app = (function(window,document,undefined) {
         var svg = d3.select("#quadcontainer").append("svg")
             .classed("svg-content", true)
             .attr("viewBox", "0 0 " + width + " " + height)
-            .attr("height", "100%")
-            .attr("width", "100%")
-            .attr("preserveAspectRatio", "xMidYMid")
+            .attr("preserveAspectRatio", "xMidYMid slice")
             .attr("id", "quad");
 
         
@@ -391,9 +389,11 @@ Code4SA.app = (function(window,document,undefined) {
         // Make it expand on click
         document.getElementById('embiggen_container').onclick = function() {
             if (this.className.search(/\bembiggen\b/gi) === -1) {
-                innerWidth = parseInt(window.innerWidth) ;
-                d3.select("#quadcontainer").append("svg")
-                    .attr("width", innerWidth - 200);
+                var innerWidth = parseInt(window.innerWidth) ;
+                var innerHeight = parseInt(window.innerHeight);
+                // d3.select("#quadcontainer").append("svg")
+                //     .attr("width", width)
+                    // .attr("height", 400);
                 var pageScroll = getPageScroll();
                 var pos = findPos(this);
                 var offsetTop = pos[1] - pageScroll[1];
@@ -405,8 +405,8 @@ Code4SA.app = (function(window,document,undefined) {
                 var origMarginTop = this.marginTop;
                 var origStyle = this.style;
                 this.style.zIndex = 5000;
-                this.style.width = (parseInt(window.innerWidth) - 40) + "px";
-                this.style.height = (parseInt(window.innerHeight) - 20) + "px";
+                this.style.width = (innerWidth - 40) + "px";
+                this.style.height = (innerHeight - 20) + "px";
                 this.style.left = "0px";
                 this.style.position = "fixed";
                 this.style.top = (offsetTop) + "px";
