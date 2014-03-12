@@ -389,6 +389,7 @@ Code4SA.app = (function(window,document,undefined) {
         // Make it expand on click
         document.getElementById('embiggen_container').onclick = function() {
             if (this.className.search(/\bembiggen\b/gi) === -1) {
+                console.log("Point 1");
                 var innerWidth = parseInt(window.innerWidth) ;
                 var innerHeight = parseInt(window.innerHeight);
                 // d3.select("#quadcontainer")
@@ -400,7 +401,7 @@ Code4SA.app = (function(window,document,undefined) {
                 var pageScroll = getPageScroll();
                 var pos = findPos(this);
                 var offsetTop = pos[1] - pageScroll[1];
-
+                console.log("Point 2");
                 var marginTop = (offsetTop * -1) + 20;
                 var origWidth = this.offsetWidth;
                 var origHeight = this.offsetHeight;
@@ -416,14 +417,16 @@ Code4SA.app = (function(window,document,undefined) {
                 this.style.marginTop = marginTop + "px";
                 this.style.marginLeft = "20px";
                 this.style.overflowY = "scroll";
+                console.log("Point 3");
                 d3.select(this).classed("embiggen", true);
                 d3.select("#vizcontainer").classed("col-md-12", false).classed("col-md-9", true);
+                console.log("Point 4");
                 d3.select("#overlay").attr("style", "display: block; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: #000; opacity: 0.6; z-index: 4999");
                 document.getElementById("overlay").onclick = function(e) { closePopup(e); };
                 document.getElementById('close').onclick = function(e) {
                     closePopup(e);
                 };
-
+                console.log("Point 5");
                 var closePopup = function(e) {
                     d3.select("#overlay").attr("style", "display: none");
                     // d3.select("#quadcontainer")
