@@ -153,6 +153,8 @@ Code4SA.app = (function(window,document,undefined) {
         var svg = d3.select("#quadcontainer").append("svg")
             .classed("svg-content", true)
             .attr("viewBox", "0 0 " + width + " " + height)
+            .attr("height", "100%")
+            .attr("width", "100%")
             .attr("preserveAspectRatio", "xMidYMid")
             .attr("id", "quad");
 
