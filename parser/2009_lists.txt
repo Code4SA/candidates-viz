@@ -9946,7 +9946,7 @@ ALLIANSIE
                               11      MAYNIER                         DAVID JOHN                    6810225195086   Y    Y      Y
 
 
-                              12      PRETORIUS                       PETRUS JOHANNES CHRISTIAAN 5005085081085      Y    Y      Y
+                              12      PRETORIUS                       PETRUS JOHANNES CHRISTIAAN    5005085081085      Y    Y      Y
 
 
                               13      VAN DER LINDE                   JACOB JEFFREY                 5507225024081   Y    Y      Y
@@ -10867,7 +10867,7 @@ DEMOCRATS
 
                               102     REDGARD                         THELMA                        5603200136089   Y    Y       Y
 
-                              103     PETERSON                        QUEENIE ELIZABETH MARGARET 5307130100088      Y    Y       Y
+                              103     PETERSON                        QUEENIE ELIZABETH MARGARET    5307130100088      Y    Y       Y
 
                               104     NOMVETE                         JOHANNA PHUTI                 6112100454088   Y    Y       Y
 
@@ -11408,7 +11408,7 @@ DEMOCRATS
 
                                6      SEEMELA                         PATRICK LETIHOGONOLO          6011215811085   Y    Y      Y
 
-                               7      PETERSON                        QUEENIE ELIZABETH MARGARET 5307130100088      Y    Y      Y
+                               7      PETERSON                        QUEENIE ELIZABETH MARGARET    5307130100088      Y    Y      Y
 
                                8      MODISE                          ERNEST                        5506125886086   Y    Y      Y
 
@@ -12241,7 +12241,7 @@ INKATHA FREEDOM PARTY          1      ZONDI                            KEITH MUN
                               16      LUTHULI                          BHEKIZIZWE NIVARD             5402185630087   Y    Y      Y
                               17      MNGADI                           EDWARD                        5106045581089   Y    Y      Y
                               18      NKWANYANA                        NCAMISILE JERICH              5401300731085   Y    Y      Y
-                              19      MCHUNU                           ABBIE NOMABANDLA THOKOZANI 3806200375084      Y    Y      Y
+                              19      MCHUNU                           ABBIE NOMABANDLA THOKOZANI    3806200375084      Y    Y      Y
 
 
                                                                                                                                Page 1 of 3
@@ -14675,7 +14675,7 @@ UNITED CHRISTIAN              14      SEKETE-MATOKONYANE              MASELELWAN
 DEMOCRATIC PARTY
                               15      KUTU                            MMALIYE MAGDELINE             4210010468081   Y    Y       Y
 
-                              16      MABILO                          GEORGE GAEBOLAE DINKIMETSE 3708145110081      Y    Y       Y
+                              16      MABILO                          GEORGE GAEBOLAE DINKIMETSE    3708145110081      Y    Y       Y
 
                               17      MMONO                           CHOLOTI DAVID                 3704165407085   Y    Y       Y
 
@@ -16930,7 +16930,7 @@ VRYHEIDSFRONT PLUS            20      VENTER                           CARL MAGN
                               23      VAN JAARSVELD                    RYKHAARD                      4906185028085   Y    Y      Y
                               24      RICHTER                          MARTHA JOHANNA                4005050014088   Y    Y      Y
                                                                        MARGARETHA
-                              25      GROBLER                          PETRUS JOHANNES LODEWICUS 5007235119088       Y    Y      Y
+                              25      GROBLER                          PETRUS JOHANNES LODEWICUS     5007235119088       Y    Y      Y
                               26      TRICHARDT                        LOUIS GUSTAVUS                3510105019082   Y    Y      Y
                               27      BLIGNAUT                         JOHAN DIETLOF AEGIDIUS        5203225003081   Y    Y      Y
                               28      GELDENHUYS                       ANNA SUSANNA                  6610250169083   Y    Y      Y
@@ -17541,7 +17541,7 @@ VRYHEIDSFRONT PLUS             1      MULDER                          CORNELIUS 
                                                                       HENNICKE
                                5      LOUW                            JOHANNES KOENRAAD             7507125229085   Y    Y      Y
                                6      FOURIE                          ANDREW                        4403155056080   Y    Y      Y
-                               7      GROBLER                         PETRUS JOHANNES LODEWICUS 5007235119088       Y    Y      Y
+                               7      GROBLER                         PETRUS JOHANNES LODEWICUS     5007235119088       Y    Y      Y
                                8      DEKKER                          DANIEL HENDRIK                4908315056085   Y    Y      Y
                                9      WILKINSON                       AUBREY ARTHUR                 3808295035086   Y    Y      Y
                               10      TALJAARD                        HENNING JEREMIAS              4303125070080   Y    Y      Y

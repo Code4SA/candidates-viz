@@ -75,9 +75,9 @@
         "party": "CONGRESS OF THE PEOPLE"
     }, 
     {
-        "vold": 2, 
+        "vold": 1, 
         "old": 73, 
-        "males": 138, 
+        "males": 139, 
         "median_age": 56, 
         "youngest": [
             [
@@ -111,10 +111,16 @@
                 "Male"
             ]
         ], 
-        "middle": 74, 
+        "middle": 75, 
         "abbr": "FF Plus", 
-        "females": 46, 
+        "females": 45, 
         "oldest": [
+            [
+                "WILLEM JACOBUS SNYMAN", 
+                "National", 
+                77, 
+                "Male"
+            ], 
             [
                 "DANIEL JACOBUS BRINK", 
                 "National", 
@@ -138,12 +144,6 @@
                 "National", 
                 80, 
                 "Male"
-            ], 
-            [
-                "PETRUS JOHANNES LODEWICUS 5007 GROBLER", 
-                "National", 
-                86, 
-                "Female"
             ]
         ], 
         "young": 35, 
@@ -601,8 +601,8 @@
     }, 
     {
         "vold": 3, 
-        "old": 22, 
-        "males": 86, 
+        "old": 23, 
+        "males": 85, 
         "median_age": 44, 
         "youngest": [
             [
@@ -636,9 +636,9 @@
                 "Male"
             ]
         ], 
-        "middle": 56, 
+        "middle": 55, 
         "abbr": "IFP", 
-        "females": 39, 
+        "females": 40, 
         "oldest": [
             [
                 "MSHIYENI FRED MBELE", 
@@ -1201,8 +1201,8 @@
     }, 
     {
         "vold": 3, 
-        "old": 61, 
-        "males": 134, 
+        "old": 62, 
+        "males": 135, 
         "median_age": 48, 
         "youngest": [
             [
@@ -1238,7 +1238,7 @@
         ], 
         "middle": 129, 
         "abbr": "UCDP", 
-        "females": 147, 
+        "females": 146, 
         "oldest": [
             [
                 "MOLIHI JANTJIE MOSHODI", 
@@ -1271,7 +1271,7 @@
                 "Male"
             ]
         ], 
-        "young": 88, 
+        "young": 87, 
         "party": "UNITED CHRISTIAN DEMOCRATIC PARTY"
     }, 
     {
@@ -1502,7 +1502,7 @@
     {
         "vold": 1, 
         "old": 93, 
-        "males": 261, 
+        "males": 262, 
         "median_age": 51, 
         "youngest": [
             [
@@ -1538,7 +1538,7 @@
         ], 
         "middle": 216, 
         "abbr": "DA", 
-        "females": 138, 
+        "females": 137, 
         "oldest": [
             [
                 "KEITH OLIVIER", 
@@ -1686,7 +1686,7 @@
                 "Male"
             ]
         ], 
-        "middle": 196, 
+        "middle": 197, 
         "abbr": "ID", 
         "females": 130, 
         "oldest": [
@@ -1721,7 +1721,7 @@
                 "Female"
             ]
         ], 
-        "young": 89, 
+        "young": 88, 
         "party": "INDEPENDENT DEMOCRATS"
     }, 
     {
