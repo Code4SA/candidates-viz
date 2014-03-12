@@ -9,7 +9,8 @@ Code4SA.app = (function(window,document,undefined) {
     var appTitle = "Age and gender balance in the 2009 general election";
     
     // Options
-    var pie_colors = ["#ca0020", "#92c5de", "#f4a582", "#0571b0"];
+    // var pie_colors = ["#ca0020", "#92c5de", "#f4a582", "#0571b0"];
+    // var pie_colors = ["#ff6c00", "#ffaa00", "#f30021", "#009e8e"];
     
     var width = 640,
         height = 450,
@@ -30,7 +31,8 @@ Code4SA.app = (function(window,document,undefined) {
         /************************ Side bar **********************/
         var pie_radius = 50;
             
-        var pie_color = d3.scale.ordinal().range(pie_colors);
+        //var pie_color = d3.scale.ordinal().range(pie_colors);
+        var pie_color = d3.scale.category10();
         var pie_arc = d3.svg.arc()
             .outerRadius(pie_radius - 10)
             .innerRadius(0);
@@ -97,13 +99,13 @@ Code4SA.app = (function(window,document,undefined) {
                 .style("fill", function(d, idx) { return pie_color(idx); });
             legend = svg.append("g");
             legend.selectAll("rect")
-                .data(pie_colors.slice(0, data_size))
+                .data(pie(data))
                 .enter().append("rect")
                 .attr("height", 10)
                 .attr("width", 10)
                 .attr("y", function(d, idx) { return idx * 20 + pie_radius * 2 + 5})
                 .attr("x", 20)
-                .style("fill", function(d) { return d; });
+                .style("fill", function(d, idx) { return pie_color(idx); });
             legend.selectAll("text")
                 .data(labels)
                 .enter().append("text")
@@ -288,13 +290,13 @@ Code4SA.app = (function(window,document,undefined) {
                 .attr("dy", "1.2em")
                 .text("← younger candidates");
 
-            color_list = pie_colors.slice(0);
+            // color_list = pie_colors.slice(0);
             
-            var color_scale = d3.scale
-                .ordinal()
-                .range(color_list)
-                .domain([0, this.max_total]);
-            
+            // var color_scale = d3.scale
+            //     .ordinal()
+            //     .range(color_list)
+            //     .domain([0, this.max_total]);
+            var color_scale = d3.scale.category20();
             //One group per item
             self.items = svg.selectAll("g.item")
                 .data(self.itemList, function(d, i) {
