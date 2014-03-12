@@ -5329,6 +5329,8 @@ button.code4sa-embed .close {
   background-color: #FFF;
   border: 1px #444 solid;
   padding: 20px;
+  width: 640px;
+  height: 450px;
 }
 .code4sa-embed .animate {
   transition: width 1s, height 1s, transform 1s, position 1s, margin 1s;

@@ -12,8 +12,8 @@ Code4SA.app = (function(window,document,undefined) {
     // var pie_colors = ["#ca0020", "#92c5de", "#f4a582", "#0571b0"];
     // var pie_colors = ["#ff6c00", "#ffaa00", "#f30021", "#009e8e"];
     
-    var width = 820,
-        height = 486,
+    var width = 640,
+        height = 450,
         gridSpacing = 40;
 
     // var aspect = width / height;
@@ -391,6 +391,9 @@ Code4SA.app = (function(window,document,undefined) {
             if (this.className.search(/\bembiggen\b/gi) === -1) {
                 var innerWidth = parseInt(window.innerWidth) ;
                 var innerHeight = parseInt(window.innerHeight);
+                // d3.select("#quadcontainer")
+                //     .style.width(width + "px")
+                //     .style.height(height + "px");
                 // d3.select("#quadcontainer").append("svg")
                 //     .attr("width", width)
                     // .attr("height", 400);
@@ -423,6 +426,9 @@ Code4SA.app = (function(window,document,undefined) {
 
                 var closePopup = function(e) {
                     d3.select("#overlay").attr("style", "display: none");
+                    // d3.select("#quadcontainer")
+                    //     .style.width = "auto"
+                    //     .style.height = "auto";
                     d3.select("#vizcontainer").classed("col-md-9", false).classed("col-md-12", true);
                     var el = document.getElementById("embiggen_container");
                     el.className = el.className.replace(/\banimate\b/gi, '');
