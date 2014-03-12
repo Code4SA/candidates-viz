@@ -391,6 +391,9 @@ Code4SA.app = (function(window,document,undefined) {
         // Make it expand on click
         document.getElementById('embiggen_container').onclick = function() {
             if (this.className.search(/\bembiggen\b/gi) === -1) {
+                innerWidth = parseInt(window.innerWidth) ;
+                d3.select("#quadcontainer").append("svg")
+                    .attr("width", innerWidth - 200);
                 var pageScroll = getPageScroll();
                 var pos = findPos(this);
                 var offsetTop = pos[1] - pageScroll[1];
