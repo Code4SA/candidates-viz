@@ -139,7 +139,7 @@ Code4SA.app = (function(window,document,undefined) {
             .attr("viewBox", "0 0 " + width + " 40")
             // .attr("height", 80)
             .classed("svg-content", true)
-            .attr("preserveAspectRatio", "xMidYMid slice")
+            .attr("preserveAspectRatio", "xMidYMid")
             .attr("id", "title");
 
         titleSvg.append("text")
@@ -153,7 +153,7 @@ Code4SA.app = (function(window,document,undefined) {
         var svg = d3.select("#quadcontainer").append("svg")
             .classed("svg-content", true)
             .attr("viewBox", "0 0 " + width + " " + height)
-            .attr("preserveAspectRatio", "xMidYMid slice")
+            .attr("preserveAspectRatio", "xMidYMid")
             .attr("id", "quad");
 
         
