@@ -402,6 +402,7 @@ Code4SA.app = (function(window,document,undefined) {
                 this.style.zIndex = 5000;
                 this.style.width = (parseInt(window.innerWidth) - 40) + "px";
                 this.style.height = (parseInt(window.innerHeight) - 20) + "px";
+                this.style.left = "0px";
                 this.style.position = "fixed";
                 this.style.top = (offsetTop) + "px";
                 this.style.marginTop = marginTop + "px";
