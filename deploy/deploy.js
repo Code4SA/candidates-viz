@@ -19,16 +19,16 @@ Code4SA.template = (function(window,document,undefined) {
 <div id="infobox" class="col-md-3"> \
 <div id="party_info" class="well"> \
 <h3 id="lbl_party"></h3> \
-<dl class="dl-horizontal"> \
-<dt>Total Candidates:</dt> <dd><span id="lbl_total"></span></dd> \
-<dt>Men:</dt> <dd><span id="lbl_males">50</span>%</dd> \
-<dt>Women:</dt> <dd><span id="lbl_females">50</span>%</dd> \
-<dt>Median Age:</dt> <dd><span id="lbl_median"></span> years</dd> \
-<dt>Younger than 40 years:</dt> <dd><span id="lbl_young"></span>%</dd> \
-<dt>Between 40 and 60:</dt> <dd><span id="lbl_middle"></span>%</dd> \
-<dt>Between 60 and 80:</dt> <dd><span id="lbl_old"></span>%</dd> \
-<dt># candidates over 80:</dt> <dd><span id="lbl_vold"></span></dd> \
-</dl> \
+<table class="table table-striped"> \
+<tr><td>Total Candidates</td> <td><span id="lbl_total"></span></td></tr> \
+<tr><td>Men:</td> <td><span id="lbl_males">50</span>%</td></tr> \
+<tr><td>Women:</td> <td><span id="lbl_females">50</span>%</td></tr> \
+<tr><td>Median Age:</td> <td><span id="lbl_median"></span> years</td></tr> \
+<tr><td>Younger than 40 years:</td> <td><span id="lbl_young"></span>%</td></tr> \
+<tr><td>Between 40 and 60:</td> <td><span id="lbl_middle"></span>%</td></tr> \
+<tr><td>Between 60 and 80:</td> <td><span id="lbl_old"></span>%</td></tr> \
+<tr><td># candidates over 80:</td> <td><span id="lbl_vold"></span></td></tr> \
+</table> \
 <span id="gender_pie"></span> \
 <span id="age_pie"></span> \
 <h4>Youngest Members</h4> \
