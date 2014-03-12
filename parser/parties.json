@@ -1575,8 +1575,8 @@
         "party": "DEMOCRATIC ALLIANCE/DEMOKRATIESE ALLIANSIE"
     }, 
     {
-        "vold": 2, 
-        "old": 16, 
+        "vold": 0, 
+        "old": 17, 
         "males": 131, 
         "median_age": 44, 
         "youngest": [
@@ -1611,10 +1611,16 @@
                 "Female"
             ]
         ], 
-        "middle": 107, 
+        "middle": 108, 
         "abbr": "AZAPO", 
         "females": 46, 
         "oldest": [
+            [
+                "KGOTSUBU EPHRAIM LEPUTU", 
+                "LIMPOPO", 
+                71, 
+                "Male"
+            ], 
             [
                 "BESENIA MARSHALL KUMALO", 
                 "National", 
@@ -1634,16 +1640,10 @@
                 "Male"
             ], 
             [
-                "MAPHEFO THULAMSINDO NORAH 6303 RAPOTU", 
+                "MAPHEFO THULAMSINDO NORAH    6 RAPOTU", 
                 "National", 
-                82, 
+                79, 
                 "Female"
-            ], 
-            [
-                "EMMANUEL BHEKIZITHA SINOTHI 67 NDLOVU", 
-                "National", 
-                105, 
-                "Male"
             ]
         ], 
         "young": 52, 
@@ -1715,9 +1715,9 @@
                 "Male"
             ], 
             [
-                "ARISTIDES ANDREW EMMANUEL 6205 SEIRLIS", 
+                "ARISTIDES ANDREW EMMANUEL    6 SEIRLIS", 
                 "National", 
-                97, 
+                89, 
                 "Female"
             ]
         ], 
