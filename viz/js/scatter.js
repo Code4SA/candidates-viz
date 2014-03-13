@@ -287,7 +287,7 @@ Code4SA.app = (function(window,document,undefined) {
                 .attr("text-anchor", "begin")
                 .attr("y", yScale(0))
                 .attr("x", xScale(min_age))
-                .attr("dy", "1.2em")
+                .attr("dy", "1.5em")
                 .text("← younger candidates");
 
             // color_list = pie_colors.slice(0);
@@ -336,9 +336,9 @@ Code4SA.app = (function(window,document,undefined) {
             var label_array = JSON.parse(JSON.stringify(itemList)); // deep copy
             var labels = items.append("text")
                 .attr("class", "text-label")
-                .style("font-size", function(d) {
-                    return font_scale(d.total) + "em";
-                })
+                // .style("font-size", function(d) {
+                //     return font_scale(d.total) + "em";
+                // })
                 .attr("y", yScale(50)) // start off in the center before animating
                 .attr("x", function(d) { return d.x; })
                 .attr("dy","1.2em")
