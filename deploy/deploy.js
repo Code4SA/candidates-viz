@@ -37,6 +37,7 @@ Code4SA.template = (function(window,document,undefined) {
 <div id="oldest_members"><ul /></div> \
 </div> \
 </div> \
+<div id="code4sa_logo"><a href="http://www.code4sa.org"><img src="http://hood.code4sa.org/static/logo-184x100.png" /></a></div> \
 </div> \
 </div>';
 	return {

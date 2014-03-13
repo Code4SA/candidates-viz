@@ -82,8 +82,9 @@ g.item circle:hover {
   opacity: 1.0;
 }
 
-g.item circle.party.active {
+g.item circle.party.active, g.item cirlce.active {
     opacity: 1;
+    z-index: 5000;
 }
 
 svg.pie {
@@ -224,5 +225,9 @@ left: 0;
 
 svg { max-height: 100%; }
 
+#code4sa_logo {
+  border: 1px #444 solid;
+  float: right;
+}
 
 }
