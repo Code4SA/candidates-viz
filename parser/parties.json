@@ -1576,7 +1576,7 @@
     }, 
     {
         "vold": 0, 
-        "old": 17, 
+        "old": 16, 
         "males": 131, 
         "median_age": 44, 
         "youngest": [
@@ -1611,10 +1611,16 @@
                 "Female"
             ]
         ], 
-        "middle": 108, 
+        "middle": 109, 
         "abbr": "AZAPO", 
         "females": 46, 
         "oldest": [
+            [
+                "CHUENE EDWARD MASHALANE", 
+                "National", 
+                68, 
+                "Male"
+            ], 
             [
                 "KGOTSUBU EPHRAIM LEPUTU", 
                 "LIMPOPO", 
@@ -1638,21 +1644,15 @@
                 "National", 
                 74, 
                 "Male"
-            ], 
-            [
-                "MAPHEFO THULAMSINDO NORAH    6 RAPOTU", 
-                "National", 
-                79, 
-                "Female"
             ]
         ], 
         "young": 52, 
         "party": "AZANIAN PEOPLE'S ORGANISATION"
     }, 
     {
-        "vold": 1, 
+        "vold": 0, 
         "old": 21, 
-        "males": 177, 
+        "males": 178, 
         "median_age": 44, 
         "youngest": [
             [
@@ -1686,10 +1686,16 @@
                 "Male"
             ]
         ], 
-        "middle": 197, 
+        "middle": 198, 
         "abbr": "ID", 
-        "females": 130, 
+        "females": 129, 
         "oldest": [
+            [
+                "UNUS JOOSUB", 
+                "National", 
+                66, 
+                "Male"
+            ], 
             [
                 "GAWA SAMUELS", 
                 "National", 
@@ -1713,12 +1719,6 @@
                 "GAUTENG", 
                 72, 
                 "Male"
-            ], 
-            [
-                "ARISTIDES ANDREW EMMANUEL    6 SEIRLIS", 
-                "National", 
-                89, 
-                "Female"
             ]
         ], 
         "young": 88, 

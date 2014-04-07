@@ -5016,7 +5016,7 @@ ORGANISATION
 
                               42      MABIDILALA                       TEBOGO ELIZABETH              7810030734086   Y    Y       Y
 
-                              43      RAPOTU                           MAPHEFO THULAMSINDO NORAH    6303270357082       Y    Y       Y
+                              43      RAPOTU                           MAPHEFO THULAMSINDO NORAH     6303270357082       Y    Y       Y
 
                               44      GQEBA                            GCINUMUZI NEHEMIAH            6602265014081   Y    Y       Y
 
@@ -10534,7 +10534,7 @@ INDEPENDENT                    1      DE LILLE                        PATRICIA  
 DEMOCRATS
                                2      HOOSEN                          MOHAMMED HANIFF               7203225279085   Y    Y       Y
 
-                               3      SEIRLIS                         ARISTIDES ANDREW EMMANUEL    6205125112085       Y    Y       Y
+                               3      SEIRLIS                         ARISTIDES ANDREW EMMANUEL     6205125112085       Y    Y       Y
 
                                4      MC GLUWA                        JOSEPH JOB                    6308235090082   Y    Y       Y
 
