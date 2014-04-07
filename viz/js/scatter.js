@@ -230,6 +230,7 @@ Code4SA.app = (function(window,document,undefined) {
                 .attr("class", "y label")
                 .attr("text-anchor", "begin")
                 .attr("y", 6)
+                .attr("dx", "1.5em")
                 .attr("transform", "translate(" + (xScale(min_age) + 9) + "," + (yScale(0) - 5) + ") rotate(-90)")
                 .text("← fewer women");
 
@@ -279,7 +280,7 @@ Code4SA.app = (function(window,document,undefined) {
                 .attr("x", width)
                 .attr("x", xScale(max_age))
                 .attr("y", yScale(0))
-                .attr("dy", "1.2em")
+                .attr("dy", "-1em")
                 .text("older candidates →");
 
             svg.append("text")
@@ -287,7 +288,8 @@ Code4SA.app = (function(window,document,undefined) {
                 .attr("text-anchor", "begin")
                 .attr("y", yScale(0))
                 .attr("x", xScale(min_age))
-                .attr("dy", "1.5em")
+                .attr("dx", "1em")
+                .attr("dy", "-1em")
                 .text("← younger candidates");
 
             // color_list = pie_colors.slice(0);
