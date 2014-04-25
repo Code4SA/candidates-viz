@@ -10,7 +10,6 @@ Code4SA.template = (function(window,document,undefined) {
 <div id="howto"> \
 	<p>The graph plots parties\' candidates according to median age and percentage of women. The number of candidates is indicated by circle size.</p>\
 	<p>Move your mouse over the relevant circle for more information about the party.</p> \
-	<p><strong>Check back after April 22 2014 for an updated list with the 2014 candidates.</strong></p>\
 </div> \
 <div id="quadcontainer" ></div> \
 <p><small>Source: IEC - 2009 National and Regional Candidates List</small></p> \
