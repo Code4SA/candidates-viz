@@ -18,4 +18,10 @@ is meant to install one but that didn't work for me. Instead I ran
 sudo apt-get install coffeescript
 ```
 
-YMMV
+Deployment
+==========
+
+Deploy via GitHub pages by pushing to the gh-pages branch.
+
+The `parser/parties.json` file MUST be served from the S3 bucket `code4sa.org/candidates.code4sa.org/parties.json` so that it
+gets the correct CORS headers.
