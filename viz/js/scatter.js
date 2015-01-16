@@ -176,7 +176,7 @@ Code4SA.app = (function(window,document,undefined) {
 
         
 
-        d3.json("http://candidates.code4sa.org/parser/parties.json", function(error, json) {
+        d3.json("https://s3-eu-west-1.amazonaws.com/code4sa.org/candidates.code4sa.org/parties.json", function(error, json) {
             if (error) {
                 return console.warn(error);
             }
