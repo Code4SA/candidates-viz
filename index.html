@@ -1,62 +1,17 @@
 <!DOCTYPE html>
+<html>
+<head>
 	<meta charset="utf-8">
-	<title>Deploy Test</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Template test</title>
+	<link rel="stylesheet" href="deploy.css">
 	
-	<link href="../viz/bootstrap-grid.min.css" type="text/css" rel="stylesheet" />
-	<link href="../viz/style.css" type="text/css" rel="stylesheet" />
-    <div>
-        <ul>
-            <li class="blah"></li>
-            <li class="blah"></li>
-            <li class="blah"></li>
-            <li class="blah"></li>
-            <li class="blah"></li>
-        </ul>
-    </div>
-
+</head>
+<body>
 	<div id="code4sa"></div>
-	<div class="container-fluid">
-    <div class="row">
-        <div id="quadcontainer" class="col-md-8">
-            <h2 class="text-center">Party candidates in the 2009 General Election</h2>
-        </div>
-        <div id="infobox" class="col-md-4">
-            <div id="party_info">
-                <h3 id="lbl_party"></h3>
-                <dl class="dl-horizontal">
-                    <dt>Total Candidates:</dt> <dd><span id="lbl_total"></span></dd>
-
-                    <dt>Men:</dt> <dd><span id="lbl_males">50</span>%</dd>
-                    <dt>Women:</dt> <dd><span id="lbl_females">50</span>%</dd>
-
-                    <dt>Median Age:</dt> <dd><span id="lbl_median"></span> years</dd>
-                    <dt>Younger than 40 years:</dt> <dd><span id="lbl_young"></span>%</dd>
-                    <dt>Between 40 and 60:</dt> <dd><span id="lbl_middle"></span>%</dd>
-                    <dt>Between 60 and 80:</dt> <dd><span id="lbl_old"></span>%</dd>
-                    <dt># candidates over 80:</dt> <dd><span id="lbl_vold"></span></dd>
-                </dl>
-                <span id="gender_pie"></span>
-                <span id="age_pie"></span>
-
-                <h4>Youngest Members</h4>
-                <div id="youngest_members"></div>
-                <h4>Oldest Members</h4>
-                <div id="oldest_members"></div>
-            </div>
-
-            <h3>Who are you voting for?</h3>
-            <p>
-            Compare the candidate lists for political parties in the 2009 general elections. What does a party's manifesto say about youth unemployment and how is that reflected in their demographic make-up. The graph to the left plots parties according to their median age as well as the percentage of women amongst their candidates. Larger parties (more candidates) are represented by large circles. Correspondingly, smaller parties are represented by small circles.
-            </p>
-
-            <p>Move your mouse over the relevant circle for more information about the party.</p>
-
-            <p><small>Source: IEC - 2009 National and Regional Candidates List</small></p>
-        </div>
-    </div>
-</div>
-
-<script src="deploy-ck.js"></script>
-<script>
-	deploy("test");
-</script>
+	<script src="deploy-ck.js"></script>
+	<script>
+		Code4SA.framework.deploy();
+	</script>
+</body>
+</html>
